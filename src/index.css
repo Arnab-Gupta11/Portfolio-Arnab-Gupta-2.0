@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap");
+
+.stroke_text {
+  -webkit-text-stroke: 0.5px rgba(124, 103, 142, 0.176);
+  -webkit-text-fill-color: transparent;
+}
