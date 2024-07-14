@@ -2,10 +2,6 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    fontFamily: {
-      sora: ["Sora", "sans-serif"],
-      bricolage: ["Bricolage Grotesque", "sans-serif"],
-    },
     // colors: {
     //   secondary: "#888A8B",
     // },
@@ -13,6 +9,10 @@ export default {
       backgroundImage: {
         "button-gradient": "linear-gradient(to right, rgb(135, 80, 247) , rgb(42, 20, 84))",
         "button-gradient-hover": "linear-gradient(to left, rgb(135, 80, 247) , rgb(42, 20, 84))",
+      },
+      fontFamily: {
+        sora: ["Sora", "sans-serif"],
+        bricolage: ["Bricolage Grotesque", "sans-serif"],
       },
     },
   },
