@@ -22,7 +22,7 @@ const Photo = () => {
         </motion.div>
 
         {/* Circle */}
-        <motion.svg className={"w-[300px] h-[300px]"} fill="#0E1018" viewBox="0 0 506 506" xmlns="http://www.w3.org/2000/svg">
+        <motion.svg className={"w-[300px] h-[300px]"} fill="#120D24" viewBox="0 0 506 506" xmlns="http://www.w3.org/2000/svg">
           <motion.circle
             cx="253"
             cy="253"

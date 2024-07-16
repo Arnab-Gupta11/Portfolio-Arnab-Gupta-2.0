@@ -13,6 +13,13 @@ import tailwind from "../assets/Icon/tailwind.png";
 import material from "../assets/Icon/material.png";
 import redux from "../assets/Icon/redux.png";
 import next from "../assets/Icon/nextjs.png";
+import mysql from "../assets/Icon/mysql.png";
+import java from "../assets/Icon/java.png";
+import git from "../assets/Icon/git.png";
+import github from "../assets/Icon/github.png";
+import vs from "../assets/Icon/vs-code.png";
+import figma from "../assets/Icon/figma.png";
+import postman from "../assets/Icon/postman.png";
 
 export const skills = [
   {
@@ -61,160 +68,88 @@ export const skills = [
     ],
   },
   {
-    title: "Frontend",
+    title: "Backend",
     data: [
       {
-        label: "HTML",
-        icon: html,
-        progress: 95,
-      },
-      {
-        label: "CSS",
-        icon: css,
+        label: "NODE JS",
+        icon: node,
         progress: 85,
       },
       {
-        label: "React Js",
-        icon: react,
-        progress: 70,
+        label: "EXPRESS JS",
+        icon: express,
+        progress: 90,
       },
       {
-        label: "Next Js",
-        icon: react,
-        progress: 70,
-      },
-      {
-        label: "Tailwind CSS",
-        icon: tailwind,
+        label: "MONGODB",
+        icon: mongodb,
         progress: 85,
       },
       {
-        label: "Daisy UI",
-        icon: daisyUI,
-        progress: 90,
+        label: "FIREBASE",
+        icon: firebase,
+        progress: 75,
       },
       {
-        label: "Material UI",
-        icon: daisyUI,
-        progress: 90,
+        label: "MySQL",
+        icon: mysql,
+        progress: 75,
       },
     ],
   },
   {
-    title: "Frontend",
+    title: "Languages",
     data: [
       {
-        label: "HTML",
-        icon: html,
-        progress: 95,
-      },
-      {
-        label: "CSS",
-        icon: css,
-        progress: 85,
-      },
-      {
-        label: "React Js",
-        icon: react,
-        progress: 70,
-      },
-      {
-        label: "Next Js",
-        icon: react,
-        progress: 70,
-      },
-      {
-        label: "Tailwind CSS",
-        icon: tailwind,
-        progress: 85,
-      },
-      {
-        label: "Daisy UI",
-        icon: daisyUI,
+        label: "Javascript",
+        icon: javascript,
         progress: 90,
       },
       {
-        label: "Material UI",
-        icon: daisyUI,
-        progress: 90,
+        label: "C",
+        icon: c,
+        progress: 80,
+      },
+      {
+        label: "C++",
+        icon: cPlus,
+        progress: 80,
+      },
+      {
+        label: "Java",
+        icon: java,
+        progress: 75,
       },
     ],
   },
   {
-    title: "Frontend",
+    title: "Tools",
     data: [
       {
-        label: "HTML",
-        icon: html,
+        label: "Git",
+        icon: git,
+        progress: 855,
+      },
+      {
+        label: "Github",
+        icon: github,
+        progress: 85,
+      },
+      {
+        label: "Postman",
+        icon: postman,
+        progress: 90,
+      },
+      {
+        label: "Figma",
+        icon: figma,
+        progress: 75,
+      },
+      {
+        label: "VS code",
+        icon: vs,
         progress: 95,
-      },
-      {
-        label: "CSS",
-        icon: css,
-        progress: 85,
-      },
-      {
-        label: "React Js",
-        icon: react,
-        progress: 70,
-      },
-      {
-        label: "Next Js",
-        icon: react,
-        progress: 70,
-      },
-      {
-        label: "Tailwind CSS",
-        icon: tailwind,
-        progress: 85,
-      },
-      {
-        label: "Daisy UI",
-        icon: daisyUI,
-        progress: 90,
-      },
-      {
-        label: "Material UI",
-        icon: daisyUI,
-        progress: 90,
       },
     ],
   },
-
-  // {
-  //   label: "JAVASCRIPT",
-  //   icon: javascript,
-  //   progress: 80,
-  // },
-
-  // {
-  //   label: "NODE JS",
-  //   icon: node,
-  //   progress: 75,
-  // },
-  // {
-  //   label: "EXPRESS JS",
-  //   icon: express,
-  //   progress: 80,
-  // },
-  // {
-  //   label: "MONGODB",
-  //   icon: mongodb,
-  //   progress: 70,
-  // },
-  // {
-  //   label: "FIREBASE",
-  //   icon: firebase,
-  //   progress: 75,
-  // },
-  // {
-  //   label: "C",
-  //   icon: c,
-  //   progress: 80,
-  // },
-  // {
-  //   label: "C++",
-  //   icon: cPlus,
-  //   progress: 80,
-  // },
 ];

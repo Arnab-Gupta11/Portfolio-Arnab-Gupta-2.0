@@ -11,3 +11,6 @@
 .box-shadow {
   box-shadow: 0 1px 3px #0e1018, 0 1px 2px #0e1018;
 }
+.accordian-card-shadow {
+  box-shadow: 2px 2px 0px 1px #8750f733, -6px -6px 10px -1px rgba(0, 0, 0, 0.15);
+}

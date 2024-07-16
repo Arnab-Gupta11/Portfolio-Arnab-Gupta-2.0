@@ -16,9 +16,9 @@ const Sidebar = () => {
         </div>
         <div className="font-bricolage mt-5">
           <h1 className="text-2xl font-semibold text-[#f0f2f5] text-center">Arnab Gupta</h1>
-          <p className="font-medium text-base text-[#f0f2f5b3] mt-2">
-            As a Passionate <span className="text-white font-semibold">MERN stack developer</span>, I turn ideas into dynamic web applications.
-            Innovation and creativity drive my code.
+          <p className="font-medium text-base text-[#f0f2f5b3] mt-2 text-center">
+            I am a creative <span className="text-white font-semibold">Developer</span> based in Bangladesh, and I am very passionate and dedicated to
+            my work.
           </p>
         </div>
       </div>

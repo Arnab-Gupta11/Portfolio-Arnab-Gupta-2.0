@@ -3,8 +3,8 @@ const SkillsBox = ({ skill }) => {
   // eslint-disable-next-line react/prop-types
   const { label, icon, progress } = skill;
   return (
-    <div className="card relative w-40 p-2 h-32 shadow-md border border-[#0E1018] ml-5 text-center">
-      <div className="card-img h-24 w-full rounded-md transition-transform duration-300 ease bg-[#0E1018]">
+    <div className="card relative w-40 p-2 h-32 shadow-md rounded-bl-md rounded-tr-md rounded-tl-badge rounded-br-badge border border-[#0E1018] ml-5 text-center">
+      <div className="card-img h-24 w-full rounded-bl-md rounded-tr-md rounded-tl-badge rounded-br-badge transition-transform duration-300 ease bg-[#120D24]">
         <img className="w-8 h-8 mx-auto mt-4" src={icon} alt="" />
       </div>
       <div className="card-info">
