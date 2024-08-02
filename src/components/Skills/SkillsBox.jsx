@@ -9,7 +9,7 @@ const SkillsBox = ({ skill }) => {
       </div>
       <div className="card-info">
         <p className="font-medium text-base text-[#f0f2f5b3] mt-1">{label}</p>
-        <progress className="progress button-gradient  w-20" value={progress} max="100"></progress>
+        <progress className="progress w-20 before:bg-[#26134d] " value={progress} max="100"></progress>
       </div>
     </div>
     // <div className="hover:shadow-[#00EEFF] hover:shadow-lg hover:text-[#00EEFF] px-5 py-4 text-center flex flex-col justify-center bg-[#1D1730] text-white shadow-lg hover:scale-125 hover:transition-all hover:duration-500 ">

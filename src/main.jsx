@@ -7,6 +7,8 @@ import "./index.css";
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     {/* <StarsCanvas /> */}
-    <App />
+    <div className="scroll">
+      <App />
+    </div>
   </React.StrictMode>
 );

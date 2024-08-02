@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -13,4 +14,15 @@
 }
 .accordian-card-shadow {
   box-shadow: 2px 2px 0px 1px #8750f733, -6px -6px 10px -1px rgba(0, 0, 0, 0.15);
+}
+/* .project-card-shadow {
+  box-shadow: 2px 2px 0px 1px #8750f733, -6px -6px 10px -1px rgba(0, 0, 0, 0.15);
+} */
+.skill-card {
+  box-shadow: 0px 0px 10px #8750f733;
+}
+
+* {
+  scrollbar-width: thin;
+  /* scrollbar-color: #11ad23 #000000; */
 }
