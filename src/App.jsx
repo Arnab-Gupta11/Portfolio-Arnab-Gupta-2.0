@@ -8,7 +8,7 @@ pdfjs.GlobalWorkerOptions.workerSrc = new URL("pdfjs-dist/build/pdf.worker.min.m
 function App() {
   return (
     <div className="bg-custom-gradient">
-      <div className="max-w-screen-xl mx-auto">
+      <div className="max-w-screen-xl 2xl:max-w-[1520px] mx-auto">
         <Navbar />
         <Layout />
       </div>

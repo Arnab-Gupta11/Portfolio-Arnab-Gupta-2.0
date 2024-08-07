@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useState } from "react";
 // import "./project.css";
 import BtnIcon from "../shared/BtnIcon";
@@ -7,6 +8,7 @@ import { FaExternalLinkAlt } from "react-icons/fa";
 import ProjectsIcon from "./ProjectsIcon";
 import { motion } from "framer-motion";
 import ProjectdDetails from "./ProjectdDetails";
+// eslint-disable-next-line react/prop-types
 const ProjectCard = ({ data }) => {
   const [isHovered, setIsHovered] = useState(false);
   const [showModal, setShowModal] = useState(false);
@@ -19,10 +21,10 @@ const ProjectCard = ({ data }) => {
         </figure>
         <div className="">
           <div className=" rounded-lg flex flex-row items-center gap-2 px-5 py-3">
-            <div className="text-7xl leading-none font-black text-stroke-2 font-jetBrains">{data.num}</div>
-            <div>
-              <h1 className="text-[#f0f2f5] font-semibold text-base md:text-lg px-4 pb-3 font-jetBrains">{data.title.split("-")[0]}</h1>
-              <div className="ml-3">
+            <div className="text-3xl xs:text-4xl sm:text-7xl leading-none font-black text-stroke-2 font-jetBrains">{data.num}</div>
+            <div className="">
+              <h1 className="text-[#f0f2f5] font-semibold text-xs xsm:text-base md:text-lg px-4 pb-3 font-jetBrains">{data.title.split("-")[0]}</h1>
+              <div className="ml-3 pr-3">
                 <ProjectsIcon skills={data.skills} />
               </div>
             </div>
@@ -33,10 +35,10 @@ const ProjectCard = ({ data }) => {
       {/* Overlay */}
       <div
         className="absolute inset-0 bg-[#000000e1] bg-opacity-80 opacity-0 hover:opacity-100 transition-opacity ease-in-out duration-700 flex items-center justify-center rounded-xl"
-        // initial={{ opacity: 0 }}
-        // // animate={{ opacity: isHovered ? 1 : 0 }}
-        // whileHover={{ opacity: 1 }}
-        // transition={{ duration: 0.3, easings: 34 }}
+      // initial={{ opacity: 0 }}
+      // // animate={{ opacity: isHovered ? 1 : 0 }}
+      // whileHover={{ opacity: 1 }}
+      // transition={{ duration: 0.3, easings: 34 }}
       >
         <motion.div className="flex gap-4" initial={{ scale: 0.8 }} animate={{ scale: isHovered ? 1 : 0.8 }} transition={{ duration: 0.3 }}>
           <div

@@ -16,13 +16,18 @@ const Photo = () => {
             opacity: 1,
             transition: { delay: 2.4, duration: 0.4, ease: "easeInOut" },
           }}
-          className="w-[298px] h-[298px] mix-blend-lighten absolute lg:ml-1"
+          className="w-[150px] h-[150px] xsm:w-[200px] xsm:h-[200px] sm:w-[298px] sm:h-[298px] 2xl:w-[398px] 2xl:h-[398px] mix-blend-lighten absolute lg:ml-1"
         >
           <img className="object-contain" src="/src/assets/profilePhoto.png" alt="profile photo" />
         </motion.div>
 
         {/* Circle */}
-        <motion.svg className={"w-[300px] h-[300px]"} fill="#120D24" viewBox="0 0 506 506" xmlns="http://www.w3.org/2000/svg">
+        <motion.svg
+          className={"w-[152px] h-[152px] xsm:w-[202px] xsm:h-[202px] sm:w-[300px] sm:h-[300px] 2xl:w-[400px] 2xl:h-[400px]"}
+          fill="#120D24"
+          viewBox="0 0 506 506"
+          xmlns="http://www.w3.org/2000/svg"
+        >
           <motion.circle
             cx="253"
             cy="253"

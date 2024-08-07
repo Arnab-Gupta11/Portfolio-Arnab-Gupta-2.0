@@ -3,11 +3,11 @@ import Sidebar from "../components/Sidebar/Sidebar";
 
 const Layout = () => {
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-12 px-5 lg:px-0">
-      <div className="lg:col-span-4">
+    <div className="grid grid-cols-1 xl:grid-cols-12 px-1 xsm:px-3 sm:px-5 xl:px-0">
+      <div className="xl:col-span-4">
         <Sidebar />
       </div>
-      <div className="lg:col-span-8">
+      <div className="xl:col-span-8">
         <Home />
       </div>
     </div>

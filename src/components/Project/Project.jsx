@@ -4,6 +4,7 @@ import Heading from "../shared/Heading";
 import { projectsData } from "../../data/projectsData";
 import ProjectCard from "./ProjectCard";
 import Button from "../shared/Button";
+
 const Project = () => {
   return (
     <Container>
@@ -14,14 +15,15 @@ const Project = () => {
         ))}
       </div>
       <div className="my-10 text-center">
-        <Button>
+        {/* <Button>
           <div className="flex gap-2 items-center">
             See More
             <span className="transform transition-transform duration-500 group-hover:translate-x-1.5">
               <MdOutlineReadMore size={30} />
             </span>
           </div>
-        </Button>
+        </Button> */}
+        <Button size={"auto"} icon={MdOutlineReadMore} iconAnimation={"transform transition-transform duration-500 group-hover:translate-x-1.5"}>See More</Button>
       </div>
     </Container>
   );

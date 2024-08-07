@@ -16,8 +16,8 @@ const Navbar = () => {
   window.addEventListener("scroll", changeBackground);
   return (
     <div
-      className={`navbar bg-[#09040d] border border-[#322141] fixed max-w-screen-xl  shadow-sm shadow-[#322141] z-50 ${
-        navbar ? "lg:mt-0 rounded-t-none rounded-b-xl shadow-xl shadow-[#8750f733]" : "lg:mt-5 lg:rounded-2xl"
+      className={`navbar bg-[#09040d] border border-[#322141] fixed max-w-screen-xl 2xl:max-w-[1520px]  shadow-sm shadow-[#322141] z-50 ${
+        navbar ? "xl:mt-0 rounded-t-none rounded-b-xl shadow-xl shadow-[#8750f733]" : "xl:mt-5 xl:rounded-2xl"
       }`}
     >
       <div className="navbar-start">
