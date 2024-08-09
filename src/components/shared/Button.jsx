@@ -17,7 +17,7 @@ const Button = (
 
 ) => {
   const iconSizeRes = useResponsiveIconSize();
-  const baseStyle = "inline-flex items-center justify-center px-4 py-2 font-sora transition-all  focus:outline-none";
+  const baseStyle = "inline-flex items-center justify-center px-4 py-2 font-lora font-medium transition-all  focus:outline-none";
   const variantStyles = {
     default: "bg-button-gradient text-white rounded-[8px] border-[#15002a] md:border-b-[2px] hover:bg-button-gradient-hover hover:-translate-y-[1px] hover:border-b-[6px] active:border-b-[2px] active:brightness-90 active:translate-y-[2px] hover:shadow-lg hover:shadow-[#8750f733]",
     outline: "bg-transparent text-secondary-100 hover:text-secondary-200 font-medium  rounded-[8px] border-[#15002a]  border-2 hover:border-primary-100  active:bg-[#0a0716]"

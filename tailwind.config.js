@@ -30,7 +30,7 @@ export default {
         "title-gradient": "linear-gradient(to right,#8750f7, #dddddd)",
       },
       fontFamily: {
-        sora: ["Sora", "sans-serif"],
+        lora: ["Lora", "sans-serif"],
         bricolage: ["Bricolage Grotesque", "sans-serif"],
         jetBrains: ["JetBrains Mono", "monospace"],
       },
@@ -50,6 +50,7 @@ export default {
         "project-details-shadow": "2px 2px 0px 1px #8750f733, -2px -2px 0px 0.5px #8750f733",
         "contact-form-shadow": "2px 2px 0px 1px #9C6FF8, -2px -2px 0px 0.5px #9C6FF8",
         "project-card-shadow": "0px 3px 0px 0px #8750f733, -6px -6px 10px -1px rgba(0, 0, 0, 0.15)",
+        "social-btn-shadow": "0px 2px 1px 1px #8750f733"
       },
     },
   },

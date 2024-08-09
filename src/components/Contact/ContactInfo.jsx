@@ -12,7 +12,7 @@ const ContactInfo = () => {
     {
       Icon: MdLocalPhone,
       label: "Phone:",
-      details: "+880179310960"
+      details: "+8801793109660"
     },
     {
       Icon: MdEmail,

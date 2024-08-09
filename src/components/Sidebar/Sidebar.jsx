@@ -7,6 +7,7 @@ import { IoCopyOutline } from "react-icons/io5";
 import { IoMdCheckmark } from "react-icons/io";
 import Modal from "../shared/Modal";
 import ResumeViewer from "./ResumeViewer";
+import SocialIcon from "./SocialIcon";
 const Sidebar = () => {
   const { navbar, changeBackground } = useNavbar();
   const [showModal, setShowModal] = useState(false);
@@ -41,6 +42,9 @@ const Sidebar = () => {
             <Button size={"md"} icon={IoDocumentText} iconAnimation={"transform transition-transform duration-500 group-hover:animate-bounce"} iconSize={15} onClick={() => setShowModal(true)}>Check Resume</Button>
             <Button variant={"outline"} size={"md"} icon={copyText ? IoMdCheckmark : IoCopyOutline} iconAnimation={"transform transition-transform duration-500 group-hover:scale-125"} iconSize={15} onMouseDown={handleMouseDown} onMouseUp={handleMouseUp}>Copy Email</Button>
           </div>
+        </div>
+        <div>
+          <SocialIcon/>
         </div>
       </div>
       <Modal isVisible={showModal} onClose={() => setShowModal(false)}>

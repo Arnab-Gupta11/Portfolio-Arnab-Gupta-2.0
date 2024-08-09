@@ -13,10 +13,10 @@ const ProjectCard = ({ data }) => {
   const [showModal, setShowModal] = useState(false);
 
   return (
-    <div className="relative rounded-xl " onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
-      <div className="card card-compact bg-card-gradient rounded-xl shadow-project-card-shadow group">
-        <figure>
-          <img src={data.coverPhoto} alt="Shoes" className="w-full h-full shadow-project-card-shadow p-3 group-hover:scale-105" />
+    <div className="relative rounded-xl group" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
+      <div className="card card-compact bg-card-gradient rounded-xl shadow-project-card-shadow ">
+        <figure className="rounded-xl overflow-hidden p-3">
+          <img src={data.coverPhoto} alt="Shoes" className="w-full h-full  group-hover:scale-110 duration-700 " />
         </figure>
         <div className="">
           <div className=" rounded-lg flex flex-row items-center gap-2 px-5 py-3">
