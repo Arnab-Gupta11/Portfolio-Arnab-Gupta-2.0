@@ -5,7 +5,7 @@ import Designation from "./Designation";
 const Introduction = () => {
   return (
     <div className="pb-5 relative">
-      <div className="text-stroke-1 text-[44px] xsm:text-6xl xs:text-[80px] sm:text-7xl md:text-[120px] lg:text-[150px] 2xl:text-[180px] absolute top-16 xsm:top-20 xl:top-24 left-0 w-full text-center z-0 font-black animate-pulse font-sans">
+      <div className="text-stroke-1 text-[44px] xsm:text-6xl xs:text-[80px] sm:text-7xl md:text-[120px] lg:text-[150px] 2xl:text-[180px] absolute top-16 xsm:top-20 xl:top-24 left-0 w-full text-center z-0 font-black animate-pulse font-sans select-none">
         WELCOME
       </div>
       <Status />

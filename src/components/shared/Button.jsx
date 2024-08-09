@@ -56,7 +56,7 @@ const Button = (
 Button.propTypes = {
   children: PropTypes.node.isRequired,
   variant: PropTypes.oneOf(['default', 'outline']),
-  size: PropTypes.oneOf(['sm', 'lg', 'xl', 'auto']),
+  size: PropTypes.oneOf(['sm', 'md', 'lg', 'auto']),
   icon: PropTypes.element,
   iconPosition: PropTypes.oneOf(['left', 'right']),
   iconAnimation: PropTypes.string,

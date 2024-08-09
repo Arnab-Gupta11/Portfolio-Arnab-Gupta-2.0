@@ -38,33 +38,6 @@ const Sidebar = () => {
             </p>
           </div>
           <div className="mt-4 flex items-center justify-center xl:justify-around gap-1 xsm:gap-2 md:gap-4 xl:gap-0">
-            {/* <Button size={"small-grad"} isModal={true} onOpen={() => setShowModal(true)}>
-              <div className=" gap-1 items-center justify-center flex">
-                <span className="transform transition-transform duration-500 group-hover:animate-bounce">
-                  <IoDocumentText size={15} />
-                </span>
-                Check Resume
-              </div>
-            </Button> */}
-
-            {/* <div className="md:hidden">
-              <Button size={"small-grad"} isModal={true} onOpen={() => setShowModal(true)}>
-                <div className="flex items-center">
-                  <span className="transform transition-transform duration-500 group-hover:animate-bounce">
-                    <IoDocumentText size={15} />
-                  </span>
-                  <span>Download Resume</span>
-                </div>
-              </Button>
-            </div> */}
-            {/* <Button size={"small"}>
-              <div className="flex gap-1 items-center justify-center group" onMouseDown={handleMouseDown} onMouseUp={handleMouseUp}>
-                <span className="transform transition-transform duration-500 group-hover:scale-125">
-                  {copyText ? <IoMdCheckmark size={15} /> : <IoCopyOutline size={15} />}
-                </span>
-                Copy Email
-              </div>
-            </Button> */}
             <Button size={"md"} icon={IoDocumentText} iconAnimation={"transform transition-transform duration-500 group-hover:animate-bounce"} iconSize={15} onClick={() => setShowModal(true)}>Check Resume</Button>
             <Button variant={"outline"} size={"md"} icon={copyText ? IoMdCheckmark : IoCopyOutline} iconAnimation={"transform transition-transform duration-500 group-hover:scale-125"} iconSize={15} onMouseDown={handleMouseDown} onMouseUp={handleMouseUp}>Copy Email</Button>
           </div>
