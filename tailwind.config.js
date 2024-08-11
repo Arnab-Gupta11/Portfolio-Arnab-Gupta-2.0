@@ -33,6 +33,9 @@ export default {
         lora: ["Lora", "sans-serif"],
         bricolage: ["Bricolage Grotesque", "sans-serif"],
         jetBrains: ["JetBrains Mono", "monospace"],
+        tangerine: ["Tangerine", "cursive"],
+        DancingScript: ["Dancing Script", "cursive"],
+        Jost: ["Jost", "sans-serif"],
       },
       colors: {
         primary: {
@@ -67,6 +70,20 @@ export default {
           "-webkit-text-stroke-color": "#1F2937",
           "-webkit-text-fill-color": "transparent",
         },
+        '.gradient-bottom-border': {
+          position: 'relative',
+          paddingBottom: '3px', // Adjust for border height
+          '&::after': {
+            content: '""',
+            position: 'absolute',
+            bottom: 0,
+            left: 0,
+            width: '100%',
+            height: '3px', // Adjust for border thickness
+            background: 'linear-gradient(to right, #8750f7, #8750f733)', // Gradient colors
+            borderRadius: '0.5rem 0.5rem 0.5rem 0.5rem', // Match with the element's border radius
+          }
+        }
       };
       addUtilities(newUtilities, ["responsive", "hover"]);
     },

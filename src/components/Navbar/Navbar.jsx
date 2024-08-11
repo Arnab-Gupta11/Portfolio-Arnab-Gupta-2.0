@@ -1,82 +1,150 @@
-// import { useState } from "react";
-// import { TiThMenu } from "react-icons/ti";
-// import { IoMdClose } from "react-icons/io";
+import { useState } from "react";
+import { Link } from "react-scroll";
+import { TiThMenu } from "react-icons/ti";
+import { TbSmartHome, TbUserSquareRounded } from "react-icons/tb";
+import { LuGraduationCap } from "react-icons/lu";
+import { FaLaptopCode } from "react-icons/fa6";
+import { BiChat } from "react-icons/bi";
+import { HiOutlineSquares2X2 } from "react-icons/hi2";
+import { TbArrowElbowRight } from "react-icons/tb";
+import { AnimatePresence, motion } from "framer-motion";
 import useNavbar from "../../hooks/useNavbar";
-
+import { containerVars, menuVars, mobileLinkVars } from "../../lib/animation";
+import Button from "../shared/Button";
+import { CgMenuRightAlt } from "react-icons/cg";
+import { IoClose } from "react-icons/io5";
 const Navbar = () => {
-  // let Links = [
-  //   { name: "HOME", link: "/" },
-  //   { name: "SERVICE", link: "/" },
-  //   { name: "ABOUT", link: "/" },
-  //   { name: "BLOG'S", link: "/" },
-  //   { name: "CONTACT", link: "/" },
-  // ];
-  // const [open, setOpen] = useState(false);
+  const navLinks = [
+    { title: "Home", href: "home", Icon: TbSmartHome },
+    { title: "Skills", href: "skills", Icon: FaLaptopCode },
+    { title: "About", href: "about", Icon: TbUserSquareRounded },
+    { title: "Projects", href: "projects", Icon: HiOutlineSquares2X2 },
+    { title: "Education", href: "education", Icon: LuGraduationCap },
+    { title: "Contact", href: "contact", Icon: BiChat },
+  ];
+
+  const [open, setOpen] = useState(false);
   const { navbar, changeBackground } = useNavbar();
+  const [activeLink, setActiveLink] = useState("");
+
   window.addEventListener("scroll", changeBackground);
+
+  const toggleMenu = () => {
+    setOpen((prevOpen) => !prevOpen);
+  };
+
+  // Function to handle the activation of a link.
+  const handleSetActive = (to) => {
+    setActiveLink(to);
+  };
   return (
-    <div
-      className={`navbar bg-[#09040d] border border-[#322141] fixed max-w-screen-xl 2xl:max-w-[1520px]  shadow-sm shadow-[#322141] z-50 ${
-        navbar ? "xl:mt-0 rounded-t-none rounded-b-xl shadow-xl shadow-[#8750f733]" : "xl:mt-5 xl:rounded-2xl"
-      }`}
-    >
-      <div className="navbar-start">
-        <div className="dropdown">
-          <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" />
-            </svg>
-          </div>
-          <ul tabIndex={0} className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-            <li>
-              <a>Item 1</a>
-            </li>
-            <li>
-              <a>Parent</a>
-              <ul className="p-2">
-                <li>
-                  <a>Submenu 1</a>
-                </li>
-                <li>
-                  <a>Submenu 2</a>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <a>Item 3</a>
-            </li>
-          </ul>
+    <div className={`flex justify-between items-center w-full bg-[#09040d] border border-[#322141] sticky top-0 max-w-screen-xl 2xl:max-w-[1520px] shadow-sm shadow-[#322141] z-50 py-2 md:py-3 ${navbar ? "xl:mt-0 rounded-t-none rounded-b-xl shadow-xl shadow-[#8750f733]" : "rounded-t-none rounded-b-xl xl:rounded-2xl"}`}>
+      <div className="justify-start">
+        <a className="btn btn-ghost text-3xl sm:text-5xl font-black font-tangerine text-transparent bg-clip-text bg-gradient-to-r from-[#8750f7] to-[#c07ecd]" onClick={() => scroll.scrollToTop()}>
+          Ag
+        </a>
+      </div>
+      <div className="justify-center hidden lg:flex">
+        <div className="inline-flex justify-center items-center gap-5 px-1">
+          <Link
+
+            to="home"
+            spy={true}
+            smooth={true}
+            offset={-145}
+            duration={500}
+            className={`cursor-pointer text-secondary-100 font-semibold font-bricolage inline-flex items-center gap-1 hover:text-[#9C6FF8] ${activeLink === "home" ? "text-[#9C6FF8] font-bold gradient-bottom-border" : ""}`}
+            onSetActive={handleSetActive}
+          >
+            <TbSmartHome className="" size={16} />
+            <span className="text-base font-bricolage">home</span>
+          </Link>
+          {navLinks.slice(1, 6).map((item, index) => {
+            const { title, href, Icon } = item;
+            return (
+              <Link
+                key={index}
+                to={href}
+                spy={true}
+                smooth={true}
+                offset={-72}
+                duration={500}
+                className={`cursor-pointer text-secondary-100 font-semibold font-bricolage inline-flex items-center gap-1 hover:text-[#9C6FF8] ${activeLink === href ? "text-[#9C6FF8] font-bold gradient-bottom-border" : ""}`}
+                onSetActive={handleSetActive}
+              >
+                <Icon className="" size={16} />
+                <span className="text-base font-bricolage">{title}</span>
+              </Link>
+            )
+          })}
         </div>
-        <a className="btn btn-ghost text-xl">daisyUI</a>
       </div>
-      <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
-          <li>
-            <a>Item 1</a>
-          </li>
-          <li>
-            <details>
-              <summary>Parent</summary>
-              <ul className="p-2">
-                <li>
-                  <a>Submenu 1</a>
-                </li>
-                <li>
-                  <a>Submenu 2</a>
-                </li>
-              </ul>
-            </details>
-          </li>
-          <li>
-            <a>Item 3</a>
-          </li>
-        </ul>
+      <div className="justify-end">
+        <div className="inline-flex items-center justify-center gap-3">
+          <a href="mailto:arnab.gupta.011@gmail.com" className="xl:mr-4">
+            <Button icon={TbArrowElbowRight} iconPosition={"right"} iconAnimation={"transform transition-transform group-hover:scale-110 duration-700"} className={"hover:border-b-2 hover:border-primary-100 active:scale-95 hover:shadow-inner hover:bg-none hover:translate-y-0 shadow-black hover:text-primary-100 transform transition-all duration-700"}>Let&apos;s Talk</Button>
+          </a>
+          <div className="dropdown mr-4">
+            <div className="lg:hidden" onClick={toggleMenu}>
+              {open ? <IoClose className="text-secondary-100 font-bold" size={30} /> : <CgMenuRightAlt className="text-secondary-100 font-bold" size={30} />}
+            </div>
+          </div>
+        </div>
       </div>
-      <div className="navbar-end">
-        <a className="btn">Button</a>
-      </div>
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            variants={menuVars}
+            initial="initial"
+            animate="animate"
+            exit="exit"
+            className="fixed left-0 top-16 w-full origin-top bg-[#09040d] opacity-95 text-secondary-100 p-10 rounded-xl mr-2"
+          >
+            <div className="flex h-full flex-col">
+              {/* <div className="flex justify-between">
+                <h1 className="text-lg text-black">Portfolio</h1>
+                <p className="cursor-pointer text-md text-black" onClick={toggleMenu}>
+                  Close
+                </p>
+              </div> */}
+              <motion.div
+                variants={containerVars}
+                initial="initial"
+                animate="open"
+                exit="initial"
+                className="flex flex-col h-full justify-center font-lora items-center gap-4 "
+              >
+                {navLinks.map((link, index) => (
+                  <div key={index} className="overflow-hidden">
+                    <MobileNavLink key={index} title={link.title} href={link.href} Icon={link.Icon} />
+                  </div>
+                ))}
+              </motion.div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 };
 
 export default Navbar;
+
+const MobileNavLink = ({ title, href, Icon }) => {
+  return (
+    <motion.div variants={mobileLinkVars} className="text-5xl uppercase text-black">
+      <Link
+        to={href}
+        spy={true}
+        smooth={true}
+        offset={-35}
+        duration={500}
+        className="cursor-pointer text-secondary-100 inline-flex gap-1 items-center font-semibold"
+        activeClass="text-blue-500 font-bold border-b-2 border-blue-500"
+      >
+        <Icon className="" size={16} />
+        <span className="text-base font-bricolage">{title}</span>
+      </Link>
+    </motion.div>
+  );
+};

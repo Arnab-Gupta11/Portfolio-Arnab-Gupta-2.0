@@ -2,7 +2,8 @@ import { MdEmail } from "react-icons/md";
 import cn from "../../lib/cn";
 import Button from "../shared/Button"
 import { FaPhoneAlt, FaUser } from "react-icons/fa";
-import { IoIosSend } from "react-icons/io";
+import { CiLocationArrow1 } from "react-icons/ci";
+import { TbSend } from "react-icons/tb";
 import { BsChatFill } from "react-icons/bs";
 import { ImSpinner9 } from "react-icons/im";
 import { useForm } from "react-hook-form";
@@ -99,7 +100,7 @@ const ContactForm = () => {
             {errors.message && <span className="text-primary-100 font-medium text-[10px] xsm:text-xs 2xl:text-sm mt-1 ">Message is required</span>}
           </div>
         </div>
-        <Button icon={loading ? ImSpinner9 : IoIosSend} size={"md"} iconPosition={"right"} iconAnimation={loading ? "animate-spin" : "transform transition-transform group-hover:rotate-12 group-hover:translate-x-1 group-hover:-translate-y-1.5 duration-700"}>Send Message</Button>
+        <Button icon={loading ? ImSpinner9 : TbSend} size={"md"} iconPosition={"right"} iconAnimation={loading ? "animate-spin" : "transform transition-transform group-hover:rotate-12 group-hover:translate-x-1 group-hover:-translate-y-1.5 duration-700"}>Send Message</Button>
       </form>
     </div>
   )

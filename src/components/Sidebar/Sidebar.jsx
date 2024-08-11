@@ -24,7 +24,7 @@ const Sidebar = () => {
   return (
     <div>
       <div
-        className={`text-white xl:h-[calc(100vh-100px)] 2xl:h-[calc(100vh-145px)] xl:fixed xl:w-[400px] bg-[#09040d] 2xl:w-[480px] rounded-2xl border border-[#322141] shadow-sm shadow-[#322141]  px-7 py-5 2xl:py-10 ${navbar ? "xl:mt-[90px] mt-20" : "xl:mt-28 mt-20"
+        className={`text-white xl:h-[calc(100vh-100px)] 2xl:h-[calc(100vh-145px)] xl:fixed xl:w-[400px] bg-[#09040d] 2xl:w-[480px] rounded-2xl border border-[#322141] shadow-sm shadow-[#322141]  px-7 py-5 2xl:py-10 ${navbar ? "" : "mt-5"
           }`}
       >
         <div className="flex flex-col">
@@ -32,7 +32,7 @@ const Sidebar = () => {
             <Photo />
           </div>
           <div className="font-bricolage mt-5 2xl:mt-9">
-            <h1 className="text-2xl 2xl:text-5xl font-semibold text-secondary-200 text-center">Arnab Gupta</h1>
+            <h1 className="text-2xl 2xl:text-5xl font-semibold text-secondary-200 font-lora text-center">Arnab Gupta</h1>
             <p className="font-medium text-xs sm:text-base 2xl:text-2xl text-[#f0f2f5b3] mt-2 2xl:mt-5 text-center">
               I am a creative <span className="text-white font-semibold">Developer</span> based in Bangladesh, and I am very passionate and dedicated
               to my work.
@@ -44,7 +44,7 @@ const Sidebar = () => {
           </div>
         </div>
         <div>
-          <SocialIcon/>
+          <SocialIcon />
         </div>
       </div>
       <Modal isVisible={showModal} onClose={() => setShowModal(false)}>
