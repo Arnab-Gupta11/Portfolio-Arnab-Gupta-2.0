@@ -9,7 +9,7 @@ const About = () => {
         <Heading title={"About Me"} desc={""}></Heading>
 
         <div className="max-w-screen-sm mx-auto font-bricolage pt-5 mb-5 pb-10">
-          <div className="collapse collapse-plus bg-gradient-to-br from-[#070215] to-[#120D24] accordian-card-shadow  mb-2 rounded-lg">
+          <div className="collapse collapse-plus bg-gradient-to-br from-[#070215] to-[#120D24] shadow-lg shadow-red-400 dark:accordian-card-shadow  mb-2 rounded-lg">
             <input type="radio" name="my-accordion-3" defaultChecked />
             <div className="collapse-title text-sm xsm:text-base md:text-lg font-medium text-[#f0f2f5]">Who I Am and What I’m Doing?</div>
             <div className="collapse-content">

@@ -1,32 +1,17 @@
 import { FiGithub } from "react-icons/fi";
 import { HiOutlineExternalLink } from "react-icons/hi";
-const BtnGroup = () => {
+const BtnGroup = ({ data }) => {
   return (
-    <div className="flex items-center justify-center gap-0">
-      <button className="group flex items-center justify-start w-8 h-8 bg-transparent rounded-full cursor-pointer relative overflow-hidden transition-all duration-700 shadow-lg hover:w-[85px] hover:rounded-lg  active:translate-y-1 border-2 border-primary-100 mx-3 active:shadow-md active:shadow-primary-200">
-        <div className="flex items-center justify-center w-full transition-all duration-1000 group-hover:justify-start group-hover:px-3 group-hover:scale-110 text-primary-100">
-          <FiGithub fontWeight={300} />
-        </div>
-        <div className="absolute right-2 transform translate-x-full opacity-0 text-primary-100 text-base font-medium transition-all duration-1000 group-hover:translate-x-0 group-hover:opacity-100">
-          Client
-        </div>
-      </button>
-      <button className="group flex items-center justify-start w-8 h-8 bg-transparent rounded-full cursor-pointer relative overflow-hidden transition-all duration-700 shadow-lg hover:w-20 hover:rounded-lg  active:translate-y-1 border-2 border-primary-100 mx-3 active:shadow-md active:shadow-primary-200">
-        <div className="flex items-center justify-center w-full transition-all duration-1000 group-hover:justify-start group-hover:px-3 group-hover:scale-110 text-primary-100">
-          <HiOutlineExternalLink fontWeight={300} />
-        </div>
-        <div className="absolute right-3 transform translate-x-full opacity-0 text-primary-100 text-base font-medium transition-all duration-1000 group-hover:translate-x-0 group-hover:opacity-100">
-          Live
-        </div>
-      </button>
-      <button className="group flex items-center justify-start w-8 h-8 bg-transparent rounded-full cursor-pointer relative overflow-hidden transition-all duration-700 shadow-lg hover:w-24 hover:rounded-lg  active:translate-y-1 border-2 border-primary-100 mx-3 active:shadow-md active:shadow-primary-200 font-bricolage">
-        <div className="flex items-center justify-center w-full transition-all duration-1000 group-hover:justify-start group-hover:px-3 group-hover:scale-110 text-primary-100">
-          <FiGithub fontWeight={300} />
-        </div>
-        <div className="absolute right-2 transform translate-x-full opacity-0 text-primary-100 text-base font-medium transition-all duration-1000 group-hover:translate-x-0 group-hover:opacity-100">
-          Server
-        </div>
-      </button>
+    <div className="flex items-center justify-center gap-5">
+      <a href={data.clientGithub} target="_blank" className="tooltip hover:tooltip-open tooltip-bottom before:bg-[#26134d] before:ml-1  before:text-xs before:text-[#f0f2f5b3] before:rounded-md before:font-medium group" data-tip="Client">
+        <FiGithub className="text-secondary-100 hover:scale-110 hover:text-primary-100 cursor-pointer hover:-translate-y-2 transition-all duration-700" size={22} />
+      </a>
+      <a href={data.liveLink} target="_blank" className="tooltip hover:tooltip-open tooltip-bottom before:bg-[#26134d] before:ml-1  before:text-xs before:text-[#f0f2f5b3] before:rounded-md before:font-medium group" data-tip="Live">
+        <HiOutlineExternalLink className="text-secondary-100 hover:scale-110 hover:text-primary-100 cursor-pointer hover:-translate-y-2 transition-all duration-700" size={22} />
+      </a>
+      <a href={data.serverGithub} target="_blank" className="tooltip font-bricolage hover:tooltip-open tooltip-bottom before:bg-[#26134d] before:ml-1  before:text-xs before:text-[#f0f2f5b3] before:rounded-md before:font-medium group" data-tip="Server">
+        <FiGithub className="text-secondary-100 hover:scale-110 hover:text-primary-100 cursor-pointer hover:-translate-y-2 transition-all duration-700" size={22} />
+      </a>
     </div>
   );
 };

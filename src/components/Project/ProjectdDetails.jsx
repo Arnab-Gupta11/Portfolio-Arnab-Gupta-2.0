@@ -2,7 +2,7 @@
 import useResponsiveIconSize from "../../hooks/useResponsiveIconSize";
 import BtnGroup from "../shared/BtnGroup";
 import "./project.css";
-import { ImForward } from "react-icons/im";
+import { TbArrowBigRightLines } from "react-icons/tb";
 const ProjectdDetails = ({ data }) => {
   const iconSize = useResponsiveIconSize()
   return (
@@ -17,8 +17,8 @@ const ProjectdDetails = ({ data }) => {
         <h1 className="text-base sm:text-lg md:text-xl xl:text-3xl font-bold font-sora text-transparent bg-clip-text bg-title-gradient text-center">
           {data.title}
         </h1>
-        <div className="divider mt-3 md:mt-4">
-          <BtnGroup />
+        <div className="divider mt-3.5 md:mt-5">
+          <BtnGroup data={data} />
         </div>
         <h3 className="font-bricolage text-xs xsm:text-sm sm:text-base ">
           <span className="text-secondary-200 font-semibold ">Type: </span> <span className="text-secondary-100 font-normal">{data.type}</span>{" "}
@@ -31,11 +31,11 @@ const ProjectdDetails = ({ data }) => {
           <span className="text-secondary-200 font-semibold text-xs xsm:text-sm sm:text-base">Features : </span>{" "}
           {data.features.map((feat, index) => {
             return (
-              <div key={index} className="flex gap-2">
+              <div key={index} className="flex items-start gap-2">
                 <span className="text-secondary-200 font-semibold">
-                  <ImForward size={iconSize} className="text-[#8750f7]" />
+                  <TbArrowBigRightLines size={iconSize} className="text-[#8750f7] mt-1" />
                 </span>
-                <span className="text-secondary-100 mt-1.5 font-normal text-xs xsm:text-sm sm:text-base">{feat}</span>
+                <span className="text-secondary-100 font-normal text-xs xsm:text-sm sm:text-base">{feat}</span>
               </div>
             );
           })}

@@ -2,7 +2,6 @@ import { MdEmail } from "react-icons/md";
 import cn from "../../lib/cn";
 import Button from "../shared/Button"
 import { FaPhoneAlt, FaUser } from "react-icons/fa";
-import { CiLocationArrow1 } from "react-icons/ci";
 import { TbSend } from "react-icons/tb";
 import { BsChatFill } from "react-icons/bs";
 import { ImSpinner9 } from "react-icons/im";
@@ -27,7 +26,7 @@ const ContactForm = () => {
       .then(async (response) => {
         let json = await response.json();
         if (json.success) {
-          toast.success('Message Received Successfully!')
+          toast.success('Thank you for getting in touch! I have received your message')
           e.target.reset();
           reset();
           setLoading(false);
@@ -45,7 +44,7 @@ const ContactForm = () => {
   return (
     <div className=" max-w-lg mx-auto bg-card-gradient shadow-project-details-shadow focus-within:shadow-contact-form-shadow rounded-xl mt-10 font-bricolage">
       <Toaster
-        position="top"
+        position="top-right"
         reverseOrder={false}
       />
       <form
@@ -64,30 +63,31 @@ const ContactForm = () => {
 
         <div className="flex flex-col gap-4 mb-4">
           <div>
-            <label className={cn(baseStyle, "input flex items-center gap-2 focus-within:outline-none focus-within:shadow-sm focus-within:shadow-primary-100")}>
-              <FaUser className="text-gray-400 ml-2" size={14} />
+            <label className={cn(baseStyle, "input flex items-center gap-2 focus-within:outline-none focus-within:shadow-sm focus-within:shadow-primary-100 group")}>
+              <FaUser className="text-gray-400 ml-2 group-focus-within:text-primary-100" size={14} />
               <input type="text" placeholder="Name*" {...register("name", { required: true })} />
 
             </label>
             {errors.name && <span className="text-primary-100 font-medium text-[10px] xsm:text-xs 2xl:text-sm">Name is required</span>}
           </div>
           <div>
-            <label className={cn(baseStyle, "input flex items-center gap-2 focus-within:outline-none focus-within:shadow-sm focus-within:shadow-primary-100")}>
-              <FaPhoneAlt className="text-gray-400 ml-2" size={14} />
+            <label className={cn(baseStyle, "input flex items-center gap-2 focus-within:outline-none focus-within:shadow-sm focus-within:shadow-primary-100 group")}>
+              <FaPhoneAlt className="text-gray-400 ml-2 group-focus-within:text-primary-100" size={14} />
               <input type="text" placeholder="Phone*" {...register("phone", { required: true })} />
             </label>
             {errors.phone && <span className="text-primary-100 font-medium text-[10px] xsm:text-xs 2xl:text-sm">Phone number is required</span>}
           </div>
           <div>
-            <label className={cn(baseStyle, "input flex items-center gap-2 focus-within:outline-none focus-within:shadow-sm focus-within:shadow-primary-100")}>
-              <MdEmail className="text-gray-400 ml-2" size={14} />
+            <label className={cn(baseStyle, "input flex items-center gap-2 focus-within:outline-none focus-within:shadow-sm focus-within:shadow-primary-100 group")}>
+              <MdEmail className="text-gray-400 ml-2 group-focus-within:text-primary-100" size={14} />
               <input type="email" placeholder="Email*" {...register("email", { required: true })} />
             </label>
             {errors.email && <span className="text-primary-100 font-medium text-[10px] xsm:text-xs 2xl:text-sm">Email is required</span>}
           </div>
-          <div className="relative grid grid-cols-1 ">
+
+          <div className="relative grid grid-cols-1 group">
             <div className="absolute left-0 top-4 flex items-center">
-              <BsChatFill className="text-gray-400 ml-4" size={14} />
+              <BsChatFill className="text-gray-400 ml-4 group-focus-within:text-primary-100" size={14} />
             </div>
             <textarea
               name="message"

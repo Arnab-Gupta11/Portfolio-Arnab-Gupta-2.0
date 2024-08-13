@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Layout from "./Layout/Layout";
 import "./App.css";
 import { pdfjs } from "react-pdf";
+import ScrollToTopButton from "./components/shared/ScrollToTopButton";
 
 pdfjs.GlobalWorkerOptions.workerSrc = new URL("pdfjs-dist/build/pdf.worker.min.mjs", import.meta.url).toString();
 function App() {
@@ -12,6 +13,7 @@ function App() {
       <div className="max-w-screen-xl 2xl:max-w-[1520px] mx-auto">
         <Navbar />
         <Layout />
+        <ScrollToTopButton />
       </div>
     </div>
   );
