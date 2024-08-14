@@ -19,8 +19,8 @@ const Button = (
   const iconSizeRes = useResponsiveIconSize();
   const baseStyle = "inline-flex items-center justify-center px-4 py-2 font-Jost font-medium transition-all  focus:outline-none";
   const variantStyles = {
-    default: "bg-button-gradient text-white rounded-[8px] border-[#15002a] md:border-b-[2px] hover:bg-button-gradient-hover hover:-translate-y-[1px] hover:border-b-[6px] active:border-b-[2px] active:brightness-90 active:translate-y-[2px] hover:shadow-lg hover:shadow-[#8750f733]",
-    outline: "bg-transparent text-secondary-100 hover:text-secondary-200 font-medium  rounded-[8px] border-[#15002a]  border-2 hover:border-primary-100  active:bg-[#0a0716]"
+    default: "bg-button-gradient-hover dark:bg-button-gradient text-white rounded-[8px] border-[#15002a] md:border-b-[2px] hover:bg-button-gradient-hover hover:-translate-y-[1px] hover:border-b-[6px] active:border-b-[2px] active:brightness-90 active:translate-y-[2px] hover:shadow-lg hover:shadow-[#8750f733]",
+    outline: "bg-transparent dark:text-secondary-100 dark:hover:text-secondary-200 font-medium  rounded-[8px] dark:border-[#15002a]  border-2 hover:border-primary-100  dark:active:bg-[#0a0716]"
   }
   const sizeStyles = {
     auto: "text-[10px] xsm:text-sm sm:text-base 2xl:text-lg px-2 py-1.5 xsm:px-4 xs:py-2 bs:px-6 bs:py-3 rounded-[6px] md:rounded-[8px]",

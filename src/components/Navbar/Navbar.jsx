@@ -13,7 +13,7 @@ const Navbar = () => {
   window.addEventListener("scroll", changeBackground);
 
   return (
-    <div className={`flex justify-between items-center w-full bg-[#E2EDF6] border-[#D3D7E1] dark:bg-[#09040d] border dark:border-[#322141] sticky top-0 max-w-screen-xl 2xl:max-w-[1520px] shadow-sm shadow-[#322141] z-50 py-2 md:py-3 ${navbar ? "xl:mt-0 rounded-t-none rounded-b-xl shadow-xl shadow-[#0e0814]" : "rounded-t-none rounded-b-xl xl:rounded-2xl"}`}>
+    <div className={`flex justify-between items-center w-full bg-[#E2EDF6] dark:bg-[#09040d] border border-[#969fbd] dark:border-[#322141] sticky top-0 max-w-screen-xl 2xl:max-w-[1520px] shadow-light-container-shadow dark:shadow-sm dark:shadow-[#322141] z-50 py-2 md:py-3 ${navbar ? "xl:mt-0 rounded-t-none rounded-b-xl shadow-xl shadow-[#c7d6ef] dark:shadow-[#0e0814]" : "rounded-t-none rounded-b-xl xl:rounded-2xl"}`}>
       {/* Logo */}
       <div className="justify-start">
         <Logo />
@@ -26,7 +26,7 @@ const Navbar = () => {
         <div className="inline-flex items-center justify-center gap-3">
           <ToggleTheme />
           <a href="mailto:arnab.gupta.011@gmail.com" className="">
-            <Button icon={TbArrowElbowRight} iconPosition={"right"} iconAnimation={"transform transition-transform group-hover:scale-110 duration-700"} className={"hover:border-b-2 hover:border-primary-100 active:scale-95 hover:shadow-inner hover:bg-none hover:translate-y-0 shadow-black hover:text-primary-100 transform transition-all duration-700"}>Let&apos;s Talk</Button>
+            <Button icon={TbArrowElbowRight} iconPosition={"right"} iconAnimation={"transform transition-transform group-hover:scale-110 duration-700"} className={"hover:border-b-2 hover:border-primary-100 active:scale-95 hover:shadow-inner hover:bg-none dark:hover:bg-none hover:translate-y-0 shadow-black hover:text-primary-700 dark:hover:text-primary-100 transform transition-all duration-700"}>Let&apos;s Talk</Button>
           </a>
           <div className="dropdown mr-4">
             {/* fade in anim  */}
@@ -66,7 +66,7 @@ const Navbar = () => {
                     exit={{ rotateY: 90, opacity: 0 }}
                     transition={{ duration: 0.3 }}
                   >
-                    <IoMdClose className="text-secondary-100 font-bold" size={30} />
+                    <IoMdClose className="dark:text-secondary-100 text-primary-600 font-bold" size={30} />
                   </motion.div>
                 ) : (
                   <motion.div
@@ -76,7 +76,7 @@ const Navbar = () => {
                     exit={{ rotateY: 90, opacity: 0 }}
                     transition={{ duration: 0.3 }}
                   >
-                    <CgMenuRightAlt className="text-secondary-100 font-bold" size={30} />
+                    <CgMenuRightAlt className="dark:text-secondary-100 text-primary-600 font-bold" size={30} />
                   </motion.div>
                 )}
               </AnimatePresence>

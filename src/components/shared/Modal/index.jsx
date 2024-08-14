@@ -42,22 +42,13 @@ const Modal = ({ isVisible, onClose, children }) => {
           >
             <div className="flex justify-end mb-1  group">
               <button
-                className="group cursor-pointer outline-none hover:rotate-90 duration-300 bg-button-gradient rounded-full w-6 h-6 sm:w-8 sm:h-8  bs:w-10 bs:h-10 text-white inline-flex justify-center items-center text-xl font-bold p-1"
+                className="group cursor-pointer outline-none hover:rotate-90 duration-300 bg-button-gradient-hover dark:bg-button-gradient rounded-full w-6 h-6 sm:w-8 sm:h-8  bs:w-10 bs:h-10 text-white inline-flex justify-center items-center text-xl font-bold p-1"
                 onClick={onClose}
               >
                 <IoClose />
               </button>
-
-              {/* <button
-                className="bg-button-gradient rounded-full w-10 h-10 text-white flex justify-center items-center text-xl font-semibold group-hover:rotate-90"
-                onClick={onClose}
-              >
-                <span className="group-hover:rotate-90">
-                  <IoClose />
-                </span>
-              </button> */}
             </div>
-            <div className=" bg-card-gradient shadow-project-details-shadow rounded-md w-[260px] xsm:w-[340px] md:w-full h-[400px] lg:h-[calc(100vh-100px)] overflow-y-scroll">
+            <div className="bg-card-gradient-light dark:bg-card-gradient shadow-project-details-shadow-light dark:shadow-project-details-shadow rounded-md w-[260px] xsm:w-[340px] md:w-full h-[400px] lg:h-[calc(100vh-100px)] overflow-y-scroll">
               {children}
             </div>
           </motion.div>

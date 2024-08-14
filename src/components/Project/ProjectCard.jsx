@@ -14,15 +14,15 @@ const ProjectCard = ({ data }) => {
 
   return (
     <div className="relative rounded-xl group" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
-      <div className="card card-compact bg-card-gradient rounded-xl shadow-project-card-shadow ">
+      <div className="card card-compact bg-card-gradient-light dark:bg-card-gradient rounded-xl  shadow-project-card-shadow-light dark:shadow-project-card-shadow ">
         <figure className="rounded-xl overflow-hidden p-3">
           <img src={data.coverPhoto} alt="Shoes" className="w-full h-full  group-hover:scale-110 duration-700 " />
         </figure>
         <div className="">
           <div className=" rounded-lg flex flex-row items-center gap-2 px-5 py-3">
-            <div className="text-3xl xs:text-4xl sm:text-7xl leading-none font-black text-stroke-2 font-jetBrains">{data.num}</div>
+            <div className="text-3xl xs:text-4xl sm:text-7xl leading-none font-black text-stroke-4 font-jetBrains">{data.num}</div>
             <div className="">
-              <h1 className="text-[#f0f2f5] font-semibold text-xs xsm:text-base md:text-lg px-4 pb-3 font-jetBrains">{data.title.split("-")[0]}</h1>
+              <h1 className="text-primary-500 dark:text-secondary-200 font-semibold text-xs xsm:text-base md:text-lg px-4 pb-3 font-jetBrains">{data.title.split("-")[0]}</h1>
               <div className="ml-3 pr-3">
                 <ProjectsIcon skills={data.skills} />
               </div>

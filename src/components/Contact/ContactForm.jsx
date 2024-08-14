@@ -9,7 +9,7 @@ import { useForm } from "react-hook-form";
 import toast, { Toaster } from "react-hot-toast";
 import { useState } from "react";
 const ContactForm = () => {
-  const baseStyle = "bg-[#120D24] text-[#EAF9F7] text-[10px] xsm:text-xs sm:text-sm font-medium block p-2 w-full rounded-lg ";
+  const baseStyle = "bg-[#E6EBF4] dark:bg-[#120D24] text-primary-600 dark:text-[#EAF9F7] text-[10px] xsm:text-xs sm:text-sm font-medium block p-2 w-full rounded-lg ";
 
   const [loading, setLoading] = useState(false);
   const { register, handleSubmit, reset, formState: { errors } } = useForm();
@@ -42,14 +42,14 @@ const ContactForm = () => {
       });
   };
   return (
-    <div className=" max-w-lg mx-auto bg-card-gradient shadow-project-details-shadow focus-within:shadow-contact-form-shadow rounded-xl mt-10 font-bricolage">
+    <div className=" max-w-lg mx-auto bg-card-gradient-light dark:bg-card-gradient  shadow-project-details-shadow-light dark:shadow-project-details-shadow focus-within:shadow-contact-form-shadow rounded-xl mt-10 font-bricolage">
       <Toaster
         position="top-right"
         reverseOrder={false}
       />
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="w-full px-2 py-2 xsm:px-3.5 xsm:py-3.5 sm:px-5 sm:py-5 md:px-10 md:py-10 mb-5 md:mb-10"
+        className="w-full px-3.5 py-3.5 sm:px-5 sm:py-5 md:px-10 md:py-10 mb-5 md:mb-10"
         // style={shadow}
         data-aos="fade-zoom-in"
         data-aos-easing="ease-in-back"

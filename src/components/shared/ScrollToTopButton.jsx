@@ -48,7 +48,7 @@ const ScrollToTop = () => {
           exit={{ opacity: 0 }}
           transition={{ duration: 0.3 }}
         >
-          <TbArrowBigUpLinesFilled className="text-2xl z-10 bg-button-gradient rounded-full w-7 h-7 md:w-8 md:h-8 p-2" size={14} />
+          <TbArrowBigUpLinesFilled className="text-2xl z-10 bg-button-gradient-hover dark:bg-button-gradient rounded-full w-7 h-7 md:w-8 md:h-8 p-2" size={14} />
         </motion.button>
       </div>
     )

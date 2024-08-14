@@ -7,7 +7,7 @@ const ToggleTheme = () => {
   return (
     <motion.button
       onClick={handleToggle}
-      className="flex items-center justify-center w-12 h-12 rounded-full bg-gray-200 dark:bg-gray-800 focus:outline-none"
+      className="flex items-center justify-center w-10 h-10 rounded-full hover:bg-secondary-300 dark:hover:bg-[#120D24] focus:outline-none"
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.9 }}
       initial={false}
@@ -21,7 +21,7 @@ const ToggleTheme = () => {
         exit={{ opacity: 0, scale: 0 }}
         transition={{ duration: 0.3 }}
       >
-        {mode === 'light' ? <BsMoonStarsFill size={24} className="text-yellow-400" /> : <IoSunny size={24} className="text-yellow-500" />}
+        {mode === 'light' ? <BsMoonStarsFill size={24} className="text-primary-300" /> : <IoSunny size={24} className="text-yellow-400" />}
       </motion.div>
     </motion.button>
   )

@@ -40,7 +40,7 @@ const Sidebar = () => {
           </div>
           <div className="mt-4 flex items-center justify-center xl:justify-around gap-1 xsm:gap-2 md:gap-4 xl:gap-0">
             <Button size={"md"} icon={IoDocumentText} iconAnimation={"transform transition-transform duration-500 group-hover:animate-bounce"} iconSize={15} onClick={() => setShowModal(true)}>Check Resume</Button>
-            <Button variant={"outline"} size={"md"} icon={copyText ? IoMdCheckmark : IoCopyOutline} iconAnimation={"transform transition-transform duration-500 group-hover:scale-125"} iconSize={15} onMouseDown={handleMouseDown} onMouseUp={handleMouseUp}>Copy Email</Button>
+            <Button variant={"outline"} size={"md"} icon={copyText ? IoMdCheckmark : IoCopyOutline} iconAnimation={"transform transition-transform duration-500 group-hover:scale-125"} className={"text-primary-600 border-primary-200 active:bg-secondary-300 hover:text-primary-300 hover:border-secondary-400"} iconSize={15} onMouseDown={handleMouseDown} onMouseUp={handleMouseUp}>Copy Email</Button>
           </div>
         </div>
         <div>

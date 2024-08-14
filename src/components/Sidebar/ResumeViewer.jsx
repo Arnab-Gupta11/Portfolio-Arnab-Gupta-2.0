@@ -5,9 +5,9 @@ const ResumeViewer = () => {
   return (
     <div className="p-5 ">
       <div className="flex items-center gap-3 justify-center">
-        <h1 className="text-transparent bg-clip-text bg-gradient-to-r from-[#8750f7] to-[#c07ecd] font-lora text-base xsm:text-lg sm:text-xl md:text-2xl font-bold">Resume</h1>
+        <h1 className="text-transparent bg-clip-text bg-gradient-to-r from-[#2a1454] to-[#8750f7] dark:bg-title-gradient font-lora text-base xsm:text-lg sm:text-xl md:text-2xl font-bold">Resume</h1>
         <a href={resume} download="Resume Of Arnab Gupta" className="tooltip hover:tooltip-open tooltip-right before:bg-[#26134d] before:ml-1  before:text-xs before:text-[#f0f2f5b3] before:rounded-md before:font-medium" data-tip="Download">
-          <ImDownload className="text-secondary-100 animate-bounce cursor-pointer" size={22} />
+          <ImDownload className="text-primary-700 dark:text-secondary-100 animate-bounce hover:animate-none cursor-pointer" size={22} />
         </a>
       </div>
       <div className="divider mt-1" />

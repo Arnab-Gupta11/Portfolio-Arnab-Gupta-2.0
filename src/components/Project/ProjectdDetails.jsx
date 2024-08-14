@@ -14,28 +14,28 @@ const ProjectdDetails = ({ data }) => {
       </div>
 
       <div className="mt-5 mb-10">
-        <h1 className="text-base sm:text-lg md:text-xl xl:text-3xl font-bold font-sora text-transparent bg-clip-text bg-title-gradient text-center">
+        <h1 className="text-base sm:text-lg md:text-xl xl:text-3xl font-bold font-sora text-transparent bg-clip-text bg-title-gradient-light dark:bg-title-gradient text-center">
           {data.title}
         </h1>
         <div className="divider mt-3.5 md:mt-5">
           <BtnGroup data={data} />
         </div>
         <h3 className="font-bricolage text-xs xsm:text-sm sm:text-base ">
-          <span className="text-secondary-200 font-semibold ">Type: </span> <span className="text-secondary-100 font-normal">{data.type}</span>{" "}
+          <span className="text-primary-500 dark:text-secondary-200 font-semibold ">Type: </span> <span className="text-primary-600 dark:text-secondary-100 font-normal">{data.type}</span>{" "}
         </h3>
         <h3 className="font-bricolage">
-          <span className="text-secondary-200 font-semibold text-xs xsm:text-sm sm:text-base">Technologoies: </span>{" "}
-          <span className="text-secondary-100 font-normal text-xs xsm:text-sm sm:text-base">{data.technologoies}</span>{" "}
+          <span className="text-primary-500 dark:text-secondary-200 font-semibold text-xs xsm:text-sm sm:text-base">Technologoies: </span>{" "}
+          <span className="text-primary-600 dark:text-secondary-100 font-normal text-xs xsm:text-sm sm:text-base">{data.technologoies}</span>{" "}
         </h3>
         <div className="space-y-1.5">
-          <span className="text-secondary-200 font-semibold text-xs xsm:text-sm sm:text-base">Features : </span>{" "}
+          <span className="text-primary-500 dark:text-secondary-200 font-semibold text-xs xsm:text-sm sm:text-base">Features : </span>{" "}
           {data.features.map((feat, index) => {
             return (
               <div key={index} className="flex items-start gap-2">
-                <span className="text-secondary-200 font-semibold">
+                <span className="text-primary-500 dark:text-secondary-200 font-semibold">
                   <TbArrowBigRightLines size={iconSize} className="text-[#8750f7] mt-1" />
                 </span>
-                <span className="text-secondary-100 font-normal text-xs xsm:text-sm sm:text-base">{feat}</span>
+                <span className="text-primary-600 dark:text-secondary-100 font-normal text-xs xsm:text-sm sm:text-base">{feat}</span>
               </div>
             );
           })}

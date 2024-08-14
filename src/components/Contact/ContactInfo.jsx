@@ -29,8 +29,8 @@ const ContactInfo = () => {
           return (
             <div key={index} className="flex flex-col justify-center items-center">
               <Icon className="bg-primary-100 text-black w-8 h-8 xsm:w-10 xsm:h-10 md:w-12 md:h-12 p-2.5 sm:p-3.5 rounded-full" size={iconSize} />
-              <h1 className="text-secondary-200 mt-1 mb-0.5 font-semibold text-sm xsm:text-sm md:text-base 2xl:text-lg">{label}</h1>
-              <h3 className="text-secondary-100 font-bold text-[10px] xsm:text-xs md:text-sm 2xl:text-base">{details}</h3>
+              <h1 className="text-primary-500 dark:text-secondary-200 mt-1 mb-0.5 font-semibold text-sm xsm:text-sm md:text-base 2xl:text-lg">{label}</h1>
+              <h3 className="text-primary-600 dark:text-secondary-100 font-bold text-[10px] xsm:text-xs md:text-sm 2xl:text-base">{details}</h3>
             </div>)
         })
       }
