@@ -7,14 +7,20 @@ import { FaExternalLinkAlt } from "react-icons/fa";
 import ProjectsIcon from "./ProjectsIcon";
 import { motion } from "framer-motion";
 import ProjectdDetails from "./ProjectdDetails";
+import { rotateY } from "../../lib/animation";
 // eslint-disable-next-line react/prop-types
 const ProjectCard = ({ data }) => {
   const [isHovered, setIsHovered] = useState(false);
   const [showModal, setShowModal] = useState(false);
 
   return (
-    <div className="relative rounded-xl group" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
-      <div className="card card-compact bg-card-gradient-light dark:bg-card-gradient rounded-xl  shadow-project-card-shadow-light dark:shadow-project-card-shadow ">
+    <motion.div
+      variants={rotateY}
+      initial="hidden"
+      whileInView="visible"
+      className="relative rounded-xl group" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
+      <motion.div
+        className="card card-compact bg-card-gradient-light dark:bg-card-gradient rounded-xl  shadow-project-card-shadow-light dark:shadow-project-card-shadow ">
         <figure className="rounded-xl overflow-hidden p-3">
           <img src={data.coverPhoto} alt="Shoes" className="w-full h-full  group-hover:scale-110 duration-700 " />
         </figure>
@@ -29,7 +35,7 @@ const ProjectCard = ({ data }) => {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
 
       {/* Overlay */}
       <div
@@ -53,7 +59,7 @@ const ProjectCard = ({ data }) => {
       <Modal isVisible={showModal} onClose={() => setShowModal(false)}>
         <ProjectdDetails data={data} />
       </Modal>
-    </div>
+    </motion.div>
   );
 };
 

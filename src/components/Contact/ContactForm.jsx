@@ -8,6 +8,8 @@ import { ImSpinner9 } from "react-icons/im";
 import { useForm } from "react-hook-form";
 import toast, { Toaster } from "react-hot-toast";
 import { useState } from "react";
+import { motion } from "framer-motion"
+import { zoomIn } from "../../lib/animation";
 const ContactForm = () => {
   const baseStyle = "bg-[#E6EBF4] dark:bg-[#120D24] text-primary-600 dark:text-[#EAF9F7] text-[10px] xsm:text-xs sm:text-sm font-medium block p-2 w-full rounded-lg ";
 
@@ -42,7 +44,11 @@ const ContactForm = () => {
       });
   };
   return (
-    <div className=" max-w-lg mx-auto bg-card-gradient-light dark:bg-card-gradient  shadow-project-details-shadow-light dark:shadow-project-details-shadow focus-within:shadow-contact-form-shadow rounded-xl mt-10 font-bricolage">
+    <motion.div
+      variants={zoomIn()} // Content fades in from below
+      initial="hidden"
+      whileInView="visible"
+      className=" max-w-lg mx-auto bg-card-gradient-light dark:bg-card-gradient  shadow-project-details-shadow-light dark:shadow-project-details-shadow focus-within:shadow-contact-form-shadow rounded-xl mt-10 font-bricolage">
       <Toaster
         position="top-right"
         reverseOrder={false}
@@ -102,7 +108,7 @@ const ContactForm = () => {
         </div>
         <Button icon={loading ? ImSpinner9 : TbSend} size={"md"} iconPosition={"right"} iconAnimation={loading ? "animate-spin" : "transform transition-transform group-hover:rotate-12 group-hover:translate-x-1 group-hover:-translate-y-1.5 duration-700"}>Send Message</Button>
       </form>
-    </div>
+    </motion.div>
   )
 }
 

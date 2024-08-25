@@ -4,6 +4,8 @@ import schoolLogo from "../../assets/education/school.jpeg";
 import { FaGraduationCap } from "react-icons/fa6";
 import Container from "../../Layout/Container";
 import Heading from "../shared/Heading";
+import { motion } from "framer-motion"
+import { fadeInOut, zoomIn } from "../../lib/animation";
 const Education = () => {
   return (
     <section >
@@ -15,7 +17,11 @@ const Education = () => {
           {/* University */}
           <li>
             <div className="timeline-start w-full md:mr-2">
-              <div className="shadow-card-shadow-light dark:shadow-card-shadow bg-card-gradient-light dark:bg-card-gradient rounded-xl px-6 py-5">
+              <motion.div
+                variants={fadeInOut("up", 0.2, 20, "tween", 1)} // Content fades in from below
+                initial="hidden"
+                whileInView="visible"
+                className="shadow-card-shadow-light dark:shadow-card-shadow bg-card-gradient-light dark:bg-card-gradient rounded-xl px-6 py-5">
                 <div className="flex items-center gap-4">
                   <img className="w-10 h-10 rounded-full" src={universityLogo} alt="" />
                   <div>
@@ -24,21 +30,33 @@ const Education = () => {
                     <h6 className="text-primary-600 dark:text-secondary-100 text-[10px] xsm:text-xs md:text-sm font-medium">December 2018 - April 2024</h6>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             </div>
-            <div className="timeline-middle text-[#8750f7]">
+            <motion.div
+              variants={zoomIn()} // Content fades in from below
+              initial="hidden"
+              whileInView="visible"
+              className="timeline-middle text-[#8750f7]">
               <FaGraduationCap size={20} />
-            </div>
+            </motion.div>
             <hr className="bg-[#8750f7]" />
           </li>
           {/* College */}
           <li>
             <hr className="bg-[#8750f7]" />
-            <div className="timeline-middle text-[#8750f7]">
+            <motion.div
+              variants={zoomIn()} // Content fades in from below
+              initial="hidden"
+              whileInView="visible"
+              className="timeline-middle text-[#8750f7]">
               <FaGraduationCap size={20} />
-            </div>
+            </motion.div>
             <div className="timeline-end w-full md:ml-2">
-              <div className="shadow-card-shadow-light dark:shadow-card-shadow bg-card-gradient-light dark:bg-card-gradient rounded-xl px-6 py-5">
+              <motion.div
+                variants={fadeInOut("up", 0.2, 20, "tween", 1)} // Content fades in from below
+                initial="hidden"
+                whileInView="visible"
+                className="shadow-card-shadow-light dark:shadow-card-shadow bg-card-gradient-light dark:bg-card-gradient rounded-xl px-6 py-5">
                 <div className="flex items-center gap-4">
                   <img className="w-10 h-10 rounded-full" src={collegeLogo} alt="" />
                   <div>
@@ -47,7 +65,7 @@ const Education = () => {
                     <h6 className="text-primary-600 dark:text-secondary-100 text-[10px] xsm:text-xs md:text-sm font-medium">May 2016 - March 2018</h6>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             </div>
             <hr className="bg-[#8750f7]" />
           </li>
@@ -55,7 +73,11 @@ const Education = () => {
           <li>
             <hr className="bg-[#8750f7]" />
             <div className="timeline-start w-full md:mr-2">
-              <div className="shadow-card-shadow-light dark:shadow-card-shadow bg-card-gradient-light dark:bg-card-gradient rounded-xl px-6 py-5">
+              <motion.div
+                variants={fadeInOut("up", 0.2, 20, "tween", 1)} // Content fades in from below
+                initial="hidden"
+                whileInView="visible"
+                className="shadow-card-shadow-light dark:shadow-card-shadow bg-card-gradient-light dark:bg-card-gradient rounded-xl px-6 py-5">
                 <div className="flex items-center gap-4">
                   <img className="w-10 h-10 rounded-full" src={schoolLogo} alt="" />
                   <div>
@@ -64,11 +86,15 @@ const Education = () => {
                     <h6 className="text-primary-600 dark:text-secondary-100 text-[10px] xsm:text-xs md:text-sm font-medium">January 2014 - February 2016</h6>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             </div>
-            <div className="timeline-middle text-[#8750f7]">
+            <motion.div
+              variants={zoomIn()} // Content fades in from below
+              initial="hidden"
+              whileInView="visible"
+              className="timeline-middle text-[#8750f7]">
               <FaGraduationCap size={20} />
-            </div>
+            </motion.div>
           </li>
         </ul>
       </Container>

@@ -31,7 +31,7 @@ export default {
         "button-gradient-hover": "linear-gradient(to left, rgb(135, 80, 247) , rgb(42, 20, 84))",
         "card-gradient": "linear-gradient(to bottom right,#070215, #120D24)",
         "card-gradient-light": "linear-gradient(145deg,#c7d6ef,#E6EBF4)",
-        "title-gradient": "linear-gradient(to right,#8750f7, #dddddd)",
+        "title-gradient": "linear-gradient(to right,#8750f7, #c168b0)",
         "title-gradient-light": "linear-gradient(to right, rgb(135, 80, 247) 0%, rgb(42, 20, 84) 51%, rgb(135, 80, 247) 100%)"
       },
       fontFamily: {
@@ -72,6 +72,34 @@ export default {
         "skill-card-shadow-light": "#c7d6ef 10px 10px 19px 0px, #c7d6ef -10px -10px 19px 0px",
         "light-container-shadow": "0px 0px 2px #a0a4af"
       },
+      keyframes: {
+        dashArray: {
+          '0%': { 'stroke-dasharray': '0 1 359 0' },
+          '50%': { 'stroke-dasharray': '0 359 1 0' },
+          '100%': { 'stroke-dasharray': '359 1 0 0' },
+        },
+        spinDashArray: {
+          '0%': { 'stroke-dasharray': '270 90' },
+          '50%': { 'stroke-dasharray': '0 360' },
+          '100%': { 'stroke-dasharray': '270 90' },
+        },
+        dashOffset: {
+          '0%': { 'stroke-dashoffset': '365' },
+          '100%': { 'stroke-dashoffset': '5' },
+        },
+        spin: {
+          '0%': { transform: 'rotate(0deg)' },
+          '12.5%, 25%': { transform: 'rotate(270deg)' },
+          '37.5%, 50%': { transform: 'rotate(540deg)' },
+          '62.5%, 75%': { transform: 'rotate(810deg)' },
+          '87.5%, 100%': { transform: 'rotate(1080deg)' },
+        },
+      },
+      animation: {
+        dashArray: 'dashArray 2s ease-in-out infinite, dashOffset 2s linear infinite',
+        spinDashArray: 'spinDashArray 2s ease-in-out infinite, spin 8s ease-in-out infinite, dashOffset 2s linear infinite',
+      },
+
     },
   },
   plugins: [

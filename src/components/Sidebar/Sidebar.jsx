@@ -8,6 +8,9 @@ import { IoMdCheckmark } from "react-icons/io";
 import Modal from "../shared/Modal";
 import ResumeViewer from "./ResumeViewer";
 import SocialIcon from "./SocialIcon";
+import { splitString } from "../../lib/splitString";
+import { motion } from "framer-motion";
+import { charVariant, fadeInOut } from "../../lib/animation";
 const Sidebar = () => {
   const { navbar, changeBackground } = useNavbar();
   const [showModal, setShowModal] = useState(false);
@@ -21,6 +24,11 @@ const Sidebar = () => {
   const handleMouseUp = () => {
     setTimeout(() => setCopyText(false), 1000); // Delay to give feedback to the user
   };
+  //animate text
+  const heading = "Arnab Gupta";
+  const desc = "I am a creative Developer based in Bangladesh, and I am very passionate and dedicated to my work.";
+  const descChar = splitString(desc);
+  const headingChar = splitString(heading);
   return (
     <div>
       <div
@@ -32,15 +40,57 @@ const Sidebar = () => {
             <Photo />
           </div>
           <div className="font-bricolage mt-5 2xl:mt-9">
-            <h1 className="text-2xl 2xl:text-5xl font-semibold text-primary-500 dark:text-secondary-200  font-lora text-center">Arnab Gupta</h1>
-            <p className="font-medium text-xs sm:text-base 2xl:text-2xl text-primary-600 dark:text-[#f0f2f5b3] mt-2 2xl:mt-5 text-center">
-              I am a creative <span className="text-[#262a2e] dark:text-white font-semibold">Developer</span> based in Bangladesh, and I am very passionate and dedicated
-              to my work.
-            </p>
+            <motion.h1
+              initial={"hidden"}
+              whileInView={"reveal"}
+              transition={{ staggerChildren: .02 }}
+              className="text-2xl 2xl:text-5xl font-semibold text-primary-500 dark:text-secondary-200  font-lora text-center">
+              {
+                headingChar.map((char) => {
+                  return (<motion.span
+                    key={char}
+                    variants={charVariant}
+                    transition={{ duration: 0.5 }}
+                  >
+                    {char}
+                  </motion.span>)
+                })
+              }
+            </motion.h1>
+            <motion.p
+              initial={"hidden"}
+              whileInView={"reveal"}
+              transition={{ staggerChildren: .02 }}
+              className="font-medium text-xs sm:text-base 2xl:text-2xl text-primary-600 dark:text-[#f0f2f5b3] mt-2 2xl:mt-5 text-center">
+              {
+                descChar.map((char) => {
+                  return (<motion.span
+                    key={char}
+                    variants={charVariant}
+                    transition={{ duration: 0.35 }}
+                  >
+                    {char}
+                  </motion.span>)
+                })
+              }
+            </motion.p>
           </div>
           <div className="mt-4 flex items-center justify-center xl:justify-around gap-1 xsm:gap-2 md:gap-4 xl:gap-0">
-            <Button size={"md"} icon={IoDocumentText} iconAnimation={"transform transition-transform duration-500 group-hover:animate-bounce"} iconSize={15} onClick={() => setShowModal(true)}>Check Resume</Button>
-            <Button variant={"outline"} size={"md"} icon={copyText ? IoMdCheckmark : IoCopyOutline} iconAnimation={"transform transition-transform duration-500 group-hover:scale-125"} className={"text-primary-600 border-primary-200 active:bg-secondary-300 hover:text-primary-300 hover:border-secondary-400"} iconSize={15} onMouseDown={handleMouseDown} onMouseUp={handleMouseUp}>Copy Email</Button>
+            <motion.div
+              variants={fadeInOut('right', 0.2, 35)} // Content fades in from below
+              initial="hidden"
+              animate="visible"
+            >
+              <Button
+                size={"md"} icon={IoDocumentText} iconAnimation={"transform transition-transform duration-500 group-hover:animate-bounce"} iconSize={15} onClick={() => setShowModal(true)}>Check Resume</Button>
+            </motion.div>
+            <motion.div
+              variants={fadeInOut('left', 0.2, 35)} // Content fades in from below
+              initial="hidden"
+              animate="visible"
+            >
+              <Button variant={"outline"} size={"md"} icon={copyText ? IoMdCheckmark : IoCopyOutline} iconAnimation={"transform transition-transform duration-500 group-hover:scale-125"} className={"text-primary-600 border-primary-200 active:bg-secondary-300 hover:text-primary-300 hover:border-secondary-400"} iconSize={15} onMouseDown={handleMouseDown} onMouseUp={handleMouseUp}>Copy Email</Button>
+            </motion.div>
           </div>
         </div>
         <div>
