@@ -27,7 +27,7 @@ export default {
       backgroundImage: {
         "main-bg": "radial-gradient(circle at 60% 80%, #19192d, #2d1929, #332C56 130%)",
         "main-bg-light": "radial-gradient(circle at 50% 10%,#d8bbeb,#c8bfef,#edd2e7 120%)",
-        "button-gradient": "linear-gradient(to right,rgb(42, 20, 84), #b964a8 )",
+      "button-gradient": "linear-gradient(to right,rgb(42, 20, 84), #b964a8)",
         "button-gradient-hover": "linear-gradient(to left, rgb(135, 80, 247) , rgb(42, 20, 84))",
         "card-gradient": "linear-gradient(to bottom right,#070215, #120D24)",
         "card-gradient-light": "linear-gradient(145deg,#c7d6ef,#E6EBF4)",

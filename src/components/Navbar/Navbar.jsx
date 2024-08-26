@@ -23,10 +23,10 @@ const Navbar = () => {
         <NavLink />
       </div>
       <div className="justify-end">
-        <div className="inline-flex items-center justify-center gap-3">
+        <div className="inline-flex items-center justify-end -mr-1.5 gap-3">
           <ToggleTheme />
           <a href="mailto:arnab.gupta.011@gmail.com" className="">
-            <Button icon={TbArrowElbowRight} iconPosition={"right"} iconAnimation={"transform transition-transform group-hover:scale-110 duration-700"} className={"hover:border-b-2 hover:border-primary-100 active:scale-95 hover:shadow-inner hover:bg-none dark:hover:bg-none hover:translate-y-0 shadow-black hover:text-primary-700 dark:hover:text-primary-100 transform transition-all duration-700"}>Let&apos;s Talk</Button>
+            <Button icon={TbArrowElbowRight} variant={"default"} iconPosition={"right"} iconAnimation={"transform transition-transform group-hover:scale-110 duration-700"} className={"hover:border-b-2 hover:border-primary-100 active:scale-95 hover:shadow-inner hover:bg-none dark:hover:bg-none hover:translate-y-0 shadow-black hover:text-primary-700 dark:hover:text-primary-100 transform transition-all duration-700"}>Let&apos;s Talk</Button>
           </a>
           <div className="dropdown mr-4">
             {/* fade in anim  */}

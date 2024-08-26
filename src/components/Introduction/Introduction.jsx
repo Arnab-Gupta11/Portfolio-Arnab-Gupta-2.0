@@ -31,7 +31,7 @@ const Introduction = () => {
 
         {/* Content */}
         <div className="relative z-10">
-          <div className="text-stroke-3 dark:text-stroke-1 text-[44px] xs:text-6xl xs:text-[80px] sm:text-7xl md:text-[120px] lg:text-[150px] 2xl:text-[180px] absolute bottom-1 xsm:bottom-3 md:bottom-0 left-0 w-full text-center font-black animate-pulse font-sans select-none z-0">
+          <div className="text-stroke-3 dark:text-stroke-1 text-[44px] xs:text-6xl xs:text-[80px] sm:text-7xl md:text-[120px] lg:text-[150px] 2xl:text-[180px] absolute bottom-1 xsm:bottom-3 md:bottom-0 left-0 w-full text-center font-black animate-pulse font-sans select-none -z-10">
             WELCOME
           </div>
           <Status />
