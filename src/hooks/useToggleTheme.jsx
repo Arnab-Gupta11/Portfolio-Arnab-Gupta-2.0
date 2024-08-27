@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-const useToggleTheme = () => {
+const 
+useToggleTheme = () => {
   const [mode, setMode] = useState("dark");
 
   const handleToggle = () => {

@@ -4,6 +4,7 @@ import Heading from "../shared/Heading";
 import { projectsData } from "../../data/projectsData";
 import ProjectCard from "./ProjectCard";
 import Button from "../shared/Button";
+import { Link } from "react-router-dom";
 
 const Project = () => {
   return (
@@ -16,7 +17,9 @@ const Project = () => {
           ))}
         </div>
         <div className="my-10 text-center">
-          <Button size={"auto"} icon={MdOutlineReadMore} iconAnimation={"transform transition-transform duration-500 group-hover:translate-x-1.5"}>See More</Button>
+          <Link to={"/all-projects"}>
+            <Button size={"auto"} icon={MdOutlineReadMore} iconAnimation={"transform transition-transform duration-500 group-hover:translate-x-1.5"}>See More</Button>
+          </Link>
         </div>
       </Container>
     </section>
