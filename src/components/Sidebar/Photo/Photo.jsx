@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
-import useToggleTheme from "../../../hooks/useToggleTheme";
+import profile from "../../../assets/profilePhoto.png"
 const Photo = () => {
-  const { mode } = useToggleTheme();
   return (
     <div className="relative z-0">
       <motion.div
@@ -19,7 +18,7 @@ const Photo = () => {
             transition: { delay: 1.2, duration: 0.4, ease: "easeInOut" },
           }}
           className="w-[150px] h-[150px] xsm:w-[200px] xsm:h-[200px] sm:w-[298px] sm:h-[298px] 2xl:w-[398px] 2xl:h-[398px] absolute ml-0.5 mt-0.5 xsm:ml-1 sm:mt-1 rounded-full dark:bg-[#120D24] bg-[#c7d6ef]">
-          <img className="object-contain " src="/src/assets/profilePhoto.png" alt="profile photo" />
+          <img className="object-contain " src={profile} alt="profile photo" />
         </motion.div>
 
         {/* Circle */}

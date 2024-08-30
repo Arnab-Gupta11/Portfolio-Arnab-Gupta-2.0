@@ -41,20 +41,24 @@ const ProjectCard = ({ data }) => {
       <div
         className="absolute inset-0 bg-[#000000e1] bg-opacity-80 opacity-0 hover:opacity-100 transition-opacity ease-in-out duration-700 flex items-center justify-center rounded-xl"
       >
-        <motion.div className="flex gap-4" initial={{ scale: 0.8 }} animate={{ scale: isHovered ? 1 : 0.8 }} transition={{ duration: 0.3 }}>
-          <div
+        <div className="flex gap-4">
+          <motion.div
+            initial={{ scale: 0.8 }} animate={{ scale: isHovered ? 1 : 0.8 }} transition={{ duration: 0.3 }}
             className="tooltip hover:tooltip-open tooltip-top before:bg-[#26134d] before:mb-1 before:text-[#f0f2f5b3] before:rounded-md before:font-medium before:text-xs"
             data-tip="View Details"
           >
             <BtnIcon Icon={CgDetailsMore} isModal={true} onOpen={() => setShowModal(true)} />
-          </div>
-          <div
+          </motion.div>
+          <motion.div
+            initial={{ scale: 0.8 }} animate={{ scale: isHovered ? 1 : 0.8 }} transition={{ duration: 0.3 }}
             className="tooltip hover:tooltip-open tooltip-top before:bg-[#26134d] before:mb-1 before:rounded-md before:text-[#f0f2f5b3] before:font-medium before:text-xs"
             data-tip="Check Live Site"
           >
-            <BtnIcon Icon={FaExternalLinkAlt} isModal={true} onOpen={() => setShowModal(true)} />
-          </div>
-        </motion.div>
+            <a href={data?.liveLink} target="_blank">
+              <BtnIcon Icon={FaExternalLinkAlt}/>
+            </a>         
+          </motion.div>
+        </div>
       </div>
       <Modal isVisible={showModal} onClose={() => setShowModal(false)}>
         <ProjectdDetails data={data} />

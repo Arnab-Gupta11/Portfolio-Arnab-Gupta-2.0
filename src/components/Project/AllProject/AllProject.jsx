@@ -1,13 +1,11 @@
-import { useEffect } from "react"
-import { projectsData } from "../../../data/projectsData"
-import { useLocation } from "react-router-dom"
-import AllProjectCard from "./AllProjectCard"
-import BackButton from "./BackButton"
+import { useEffect } from "react";
+import { projectsData } from "../../../data/projectsData";
+import AllProjectCard from "./AllProjectCard";
+import BackButton from "./BackButton";
 import ScrollToTopButton from "../../shared/ScrollToTopButton";
-import { motion } from "framer-motion"
-import { fadeInOut, zoomIn } from "../../../lib/animation"
+import { motion } from "framer-motion";
+import { fadeInOut, zoomIn } from "../../../lib/animation";
 const AllProject = () => {
-  const { pathname } = useLocation()
   useEffect(() => {
     const currentMode = localStorage.getItem("mode") || "dark";
     document.documentElement.classList.add(currentMode);
@@ -22,11 +20,13 @@ const AllProject = () => {
               variants={fadeInOut("down", 0.2, 30, "spring", 0.2)} // Content fades in from below
               initial="hidden"
               animate="visible"
-              className="font-bold text-transparent bg-clip-text bg-title-gradient-light dark:bg-title-gradient font-DancingScript p-3 md:p-5 text-2xl xs:text-3xl sm:text-4xl md:text-5xl">My Projects</motion.h1>
-            <motion.div
-              variants={zoomIn(0.8)}
-              initial="hidden"
-              animate="visible"><BackButton /></motion.div>
+              className="font-bold text-transparent bg-clip-text bg-title-gradient-light dark:bg-title-gradient font-Merienda p-3 md:p-5 text-2xl xs:text-3xl sm:text-4xl md:text-5xl"
+            >
+              My Projects
+            </motion.h1>
+            <motion.div variants={zoomIn(0.8)} initial="hidden" animate="visible">
+              <BackButton />
+            </motion.div>
           </div>
           <div className="mt-5 grid grid-cols-1 lg:grid-cols-2 gap-5 justify-between">
             {projectsData.map((data) => (
@@ -37,7 +37,7 @@ const AllProject = () => {
       </div>
       <ScrollToTopButton />
     </div>
-  )
-}
+  );
+};
 
-export default AllProject
+export default AllProject;

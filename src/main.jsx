@@ -1,7 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import StarsCanvas from "./components/StarBackground/StarBackground.jsx";
 import { router } from "./router/Router.jsx";
 import { RouterProvider } from "react-router-dom";
 
