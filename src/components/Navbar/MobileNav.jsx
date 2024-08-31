@@ -6,7 +6,7 @@ import { TbSmartHome } from "react-icons/tb";
 import { navLinks } from "../../lib/navlink";
 
 // eslint-disable-next-line react/prop-types
-const MobileNav = ({ open }) => {
+const MobileNav = ({ open, setOpen }) => {
   const { activeLink, handleSetActive } = useNavbar();
   return (
     <AnimatePresence>
@@ -16,7 +16,7 @@ const MobileNav = ({ open }) => {
           initial="initial"
           animate="animate"
           exit="exit"
-          className="fixed left-0 top-16 w-full origin-top bg-secondary-300 dark:bg-[#09040d] opacity-95 p-10 rounded-xl mr-2 lg:hidden"
+          className="fixed left-0 top-14 w-full origin-top bg-secondary-300 dark:bg-[#09040d] opacity-95 p-10 rounded-xl mr-2 lg:hidden"
         >
           <div className="flex h-full flex-col">
             <motion.div
@@ -32,8 +32,11 @@ const MobileNav = ({ open }) => {
                 smooth={true}
                 offset={-547}
                 duration={500}
-                className={`cursor-pointer text-primary-600 dark:text-secondary-100 font-semibold font-bricolage inline-flex items-center gap-1 hover:text-[#9C6FF8] ${activeLink === "home" ? "font-bold active-light dark:active gradient-bottom-border-light dark:gradient-bottom-border" : ""}`}
+                className={`cursor-pointer text-primary-600 dark:text-secondary-100 font-semibold font-bricolage inline-flex items-center gap-1 hover:text-[#9C6FF8] ${
+                  activeLink === "home" ? "font-bold active-light dark:active gradient-bottom-border-light dark:gradient-bottom-border" : ""
+                }`}
                 onSetActive={handleSetActive}
+                onClick={() => setOpen(!open)}
               >
                 <TbSmartHome className="" size={16} />
                 <span className="text-base font-bricolage">Home</span>
@@ -50,22 +53,25 @@ const MobileNav = ({ open }) => {
                         smooth={true}
                         offset={-72}
                         duration={500}
-                        className={`cursor-pointer text-primary-600 dark:text-secondary-100 font-semibold font-bricolage inline-flex items-center gap-1 hover:text-[#9C6FF8] ${activeLink === href ? "font-bold active-light dark:active gradient-bottom-border-light dark:gradient-bottom-border" : ""}`}
+                        className={`cursor-pointer text-primary-600 dark:text-secondary-100 font-semibold font-bricolage inline-flex items-center gap-1 hover:text-[#9C6FF8] ${
+                          activeLink === href ? "font-bold active-light dark:active gradient-bottom-border-light dark:gradient-bottom-border" : ""
+                        }`}
                         onSetActive={handleSetActive}
+                        onClick={() => setOpen(!open)}
                       >
                         <Icon className="" size={16} />
                         <span className="text-base font-bricolage">{title}</span>
                       </Link>
                     </motion.div>
                   </div>
-                )
+                );
               })}
             </motion.div>
           </div>
         </motion.div>
       )}
     </AnimatePresence>
-  )
-}
+  );
+};
 
 export default MobileNav;
