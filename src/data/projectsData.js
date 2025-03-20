@@ -54,7 +54,7 @@ export const projectsData = [
     skills: [react, express, mongodb, tailwindcss, firebase, daisyui],
     clientGithub: "https://github.com/Arnab-Gupta11/eLibra-client",
     serverGithub: "https://github.com/Arnab-Gupta11/eLibra-server",
-    liveLink: "http://guttural-respect.surge.sh/",
+    liveLink: "https://elibrary2.netlify.app/",
     features: [
       "Experience seamless library management with our user-friendly website featuring an eye-catching frontend. Our system ensures a smooth interaction for users, making library tasks intuitive and enjoyable. Dive into a modern, interactive platform that enhances the library experience with a visually appealing design and user-centric functionalities.",
 
@@ -74,7 +74,7 @@ export const projectsData = [
 
       "Dark/Light Mode Toggle:Enhance the user experience by incorporating a toggle option between dark and light modes, providing a personalized visual environment based on user preferences",
 
-      "Book Feedback:Enable users to provide book feedback, fostering a community-driven environment where others can read and contribute to public book reviews. This feature enhances the library experience by promoting user collaboration and shared insights."
+      "Book Feedback:Enable users to provide book feedback, fostering a community-driven environment where others can read and contribute to public book reviews. This feature enhances the library experience by promoting user collaboration and shared insights.",
     ],
   },
   {
@@ -103,7 +103,7 @@ export const projectsData = [
 
       "Private routes are restricted until login, emphasizing security and personalized interactions.",
 
-      "Users can effortlessly update product information, ensuring accurate and dynamic product catalog management."
+      "Users can effortlessly update product information, ensuring accurate and dynamic product catalog management.",
     ],
   },
 ];
