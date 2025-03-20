@@ -1,4 +1,5 @@
 import About from "../About/About";
+import Blog from "../Blog/Blog";
 import Contact from "../Contact/Contact";
 import Education from "../Education/Education";
 import Footer from "../Footer/Footer";
@@ -10,12 +11,19 @@ const Home = () => {
   return (
     <>
       <Introduction />
-      <div id="skills"><Skills /></div>
+      <div id="skills">
+        <Skills />
+      </div>
       <About />
       <Project />
       <Education />
-      <div id="contact"><Contact /></div>
-      <div className="mb-4"><Footer /></div>
+      <Blog />
+      <div id="contact">
+        <Contact />
+      </div>
+      <div className="mb-4">
+        <Footer />
+      </div>
     </>
   );
 };

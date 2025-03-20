@@ -41,7 +41,7 @@ const MobileNav = ({ open, setOpen }) => {
                 <TbSmartHome className="" size={16} />
                 <span className="text-base font-bricolage">Home</span>
               </Link>
-              {navLinks.slice(1, 6).map((link, index) => {
+              {navLinks.slice(1, 7).map((link, index) => {
                 const { title, href, Icon } = link;
                 return (
                   <div key={index} className="overflow-hidden">

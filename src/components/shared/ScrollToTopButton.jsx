@@ -41,14 +41,17 @@ const ScrollToTop = () => {
           className="w-10 h-10 md:w-12 md:h-12 bg-white text-white rounded-full flex items-center justify-center shadow-lg shadow-primary-200 animate-bounce"
           onClick={scrollToTop}
           style={{
-            background: `conic-gradient(#070215 ${scrollProgress}%, transparent 0)`
+            background: `conic-gradient(#070215 ${scrollProgress}%, transparent 0)`,
           }}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.3 }}
         >
-          <TbArrowBigUpLinesFilled className="text-2xl z-10 bg-button-gradient-hover dark:bg-button-gradient rounded-full w-7 h-7 md:w-8 md:h-8 p-2" size={14} />
+          <TbArrowBigUpLinesFilled
+            className="text-2xl z-10 bg-button-gradient-hover dark:bg-button-gradient rounded-full w-7 h-7 md:w-8 md:h-8 p-2"
+            size={14}
+          />
         </motion.button>
       </div>
     )

@@ -13,13 +13,15 @@ const NavLink = () => {
         smooth={true}
         offset={-145}
         duration={500}
-        className={`cursor-pointer text-primary-600 dark:text-secondary-100 font-semibold font-bricolage inline-flex items-center gap-1 hover:text-[#9C6FF8] ${activeLink === "home" ? "font-bold active-light dark:active gradient-bottom-border-light dark:gradient-bottom-border" : ""}`}
+        className={`cursor-pointer text-primary-600 dark:text-secondary-100 font-semibold font-bricolage inline-flex items-center gap-1 hover:text-[#9C6FF8] ${
+          activeLink === "home" ? "font-bold active-light dark:active gradient-bottom-border-light dark:gradient-bottom-border" : ""
+        }`}
         onSetActive={handleSetActive}
       >
         <TbSmartHome className="" size={16} />
         <span className="text-base font-bricolage">Home</span>
       </Link>
-      {navLinks.slice(1, 6).map((item, index) => {
+      {navLinks.slice(1, 7).map((item, index) => {
         const { title, href, Icon } = item;
         return (
           <Link
@@ -29,16 +31,18 @@ const NavLink = () => {
             smooth={true}
             offset={-72}
             duration={500}
-            className={`cursor-pointer text-primary-600 dark:text-secondary-100 font-semibold font-bricolage inline-flex items-center gap-1 hover:text-[#9C6FF8] ${activeLink === href ? "font-bold active-light dark:active gradient-bottom-border-light dark:gradient-bottom-border" : ""}`}
+            className={`cursor-pointer text-primary-600 dark:text-secondary-100 font-semibold font-bricolage inline-flex items-center gap-1 hover:text-[#9C6FF8] ${
+              activeLink === href ? "font-bold active-light dark:active gradient-bottom-border-light dark:gradient-bottom-border" : ""
+            }`}
             onSetActive={handleSetActive}
           >
             <Icon className="" size={16} />
             <span className="text-base font-bricolage">{title}</span>
           </Link>
-        )
+        );
       })}
     </div>
-  )
-}
+  );
+};
 
-export default NavLink
+export default NavLink;
