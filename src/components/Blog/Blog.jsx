@@ -23,7 +23,7 @@ const Blog = () => {
                 ))}
               </div>
               <div className="my-10 text-center">
-                <Link to={"/all-projects"}>
+                <Link to={"/all-blogs"}>
                   <Button
                     size={"auto"}
                     icon={MdOutlineReadMore}
