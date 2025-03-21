@@ -1,11 +1,14 @@
 import { useEffect } from "react";
-import { projectsData } from "../../../data/projectsData";
 import AllProjectCard from "./AllProjectCard";
 import BackButton from "./BackButton";
 import ScrollToTopButton from "../../shared/ScrollToTopButton";
 import { motion } from "framer-motion";
 import { fadeInOut, zoomIn } from "../../../lib/animation";
+import useGetAllProjects from "../../../hooks/useGetAllProjects";
+import Spinner from "../../shared/Spinner";
 const AllProject = () => {
+  const [result, isLoading] = useGetAllProjects();
+  console.log(result?.data);
   useEffect(() => {
     const currentMode = localStorage.getItem("mode") || "dark";
     document.documentElement.classList.add(currentMode);
@@ -28,11 +31,14 @@ const AllProject = () => {
               <BackButton />
             </motion.div>
           </div>
-          <div className="mt-5 grid grid-cols-1 lg:grid-cols-2 gap-5 justify-between">
-            {projectsData.map((data) => (
-              <AllProjectCard key={data.id} data={data} />
-            ))}
-          </div>
+          {isLoading && <Spinner />}
+          {!isLoading && (
+            <div className="mt-5 grid grid-cols-1 lg:grid-cols-2 gap-5 justify-between">
+              {result?.data?.map((data) => (
+                <AllProjectCard key={data.id} data={data} />
+              ))}
+            </div>
+          )}
         </div>
       </div>
       <ScrollToTopButton />

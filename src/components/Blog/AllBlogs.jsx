@@ -17,7 +17,7 @@ const AllBlogs = () => {
   }, []);
   return (
     <div>
-      <div className="max-w-screen-xl mx-auto py-5 px-3 xsm:px-5 sm:px-5 xl:px-0">
+      <div className="max-w-screen-xl mx-auto py-3 xsm:py-5 sm:py-5 xl:px-0">
         <div className="z-10 bg-[#E2EDF6] dark:bg-[#09040d] rounded-2xl border border-[#969fbd] dark:border-[#322141] shadow-light-container-shadow dark:shadow-sm dark:shadow-[#322141] p-7 min-h-screen">
           <div className="flex items-center justify-between">
             <motion.h1
