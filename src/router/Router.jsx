@@ -4,6 +4,7 @@ import App from "../App";
 import TransitionLayout from "../Layout/TransitionLayout";
 import AllProject from "../components/Project/AllProject/AllProject";
 import AllBlogs from "../components/Blog/AllBlogs";
+import BlogDetails from "../components/Blog/BlogDetails";
 
 export const router = createBrowserRouter([
   {
@@ -21,6 +22,10 @@ export const router = createBrowserRouter([
       {
         path: "/all-blogs",
         element: <AllBlogs />,
+      },
+      {
+        path: "/blogs/:id",
+        element: <BlogDetails />,
       },
     ],
   },

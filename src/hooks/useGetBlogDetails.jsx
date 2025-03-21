@@ -1,11 +1,11 @@
 import { useQuery } from "@tanstack/react-query";
 import { api } from "../lib/axiosInstance";
 
-const useGetAllBlogs = () => {
+const useGetBlogDetails = (id) => {
   const { data: result = [], isLoading } = useQuery({
-    queryKey: ["blogs"],
+    queryKey: ["blogsDetails"],
     queryFn: async () => {
-      const res = await api.get("/blogs");
+      const res = await api.get(`/blogs/${id}`);
       return res.data;
     },
   });
@@ -13,4 +13,4 @@ const useGetAllBlogs = () => {
   return [result, isLoading];
 };
 
-export default useGetAllBlogs;
+export default useGetBlogDetails;
